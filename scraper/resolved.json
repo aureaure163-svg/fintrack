@@ -1,0 +1,202 @@
+{
+ "Alvarez & Marsal": {
+  "at": "2026-11-11T18:03:10+00:00",
+  "configs": []
+ },
+ "BNP Paribas": {
+  "at": "2026-11-11T18:03:10+00:00",
+  "configs": [
+   {
+    "ats": "workable",
+    "token": "bnp-paribas"
+   }
+  ],
+  "note": "remplace le connecteur de sources.yaml"
+ },
+ "Bpifrance": {
+  "at": "2026-11-11T18:03:10+00:00",
+  "configs": [
+   {
+    "ats": "workable",
+    "token": "bpifrance"
+   }
+  ]
+ },
+ "CITIC CLSA": {
+  "at": "2026-11-11T18:03:10+00:00",
+  "configs": [
+   {
+    "ats": "workday",
+    "url": "https://citicclsa.wd3.myworkdayjobs.com/External"
+   }
+  ]
+ },
+ "Crédit Agricole": {
+  "at": "2026-11-11T18:03:10+00:00",
+  "configs": [
+   {
+    "ats": "workable",
+    "token": "credit-agricole"
+   }
+  ]
+ },
+ "Crédit Agricole CIB": {
+  "at": "2026-11-11T18:03:10+00:00",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "token": "creditagricolecib"
+   }
+  ]
+ },
+ "Deloitte": {
+  "at": "2026-11-11T18:03:10+00:00",
+  "configs": [
+   {
+    "ats": "workday",
+    "url": "https://deloitteie.wd3.myworkdayjobs.com/Experienced_Professionals"
+   },
+   {
+    "ats": "lever",
+    "token": "deloitte"
+   },
+   {
+    "ats": "smartrecruiters",
+    "token": "Deloitte6"
+   }
+  ]
+ },
+ "Eight Advisory": {
+  "at": "2026-11-11T18:03:10+00:00",
+  "configs": [
+   {
+    "ats": "workable",
+    "token": "eight"
+   }
+  ]
+ },
+ "Evercore": {
+  "at": "2026-11-11T18:03:10+00:00",
+  "configs": [
+   {
+    "ats": "workable",
+    "token": "evercore"
+   }
+  ]
+ },
+ "FTI Consulting": {
+  "at": "2026-11-11T18:03:10+00:00",
+  "configs": [
+   {
+    "ats": "workable",
+    "token": "fti-consulting"
+   }
+  ]
+ },
+ "Falkensteg": {
+  "at": "2026-11-11T18:03:10+00:00",
+  "configs": []
+ },
+ "Jefferies": {
+  "at": "2026-11-11T18:03:10+00:00",
+  "configs": []
+ },
+ "KKR": {
+  "at": "2026-11-11T18:03:10+00:00",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "token": "stage"
+   }
+  ],
+  "note": "remplace le connecteur de sources.yaml"
+ },
+ "La Banque Postale": {
+  "at": "2026-11-11T18:03:10+00:00",
+  "configs": [
+   {
+    "ats": "workable",
+    "token": "la"
+   }
+  ]
+ },
+ "Lazard": {
+  "at": "2026-11-11T18:03:10+00:00",
+  "configs": []
+ },
+ "Mediobanca": {
+  "at": "2026-11-11T18:03:10+00:00",
+  "configs": []
+ },
+ "Millennium": {
+  "at": "2026-11-11T18:03:10+00:00",
+  "configs": [
+   {
+    "ats": "workable",
+    "token": "millennium"
+   }
+  ]
+ },
+ "Natixis": {
+  "at": "2026-11-11T18:03:10+00:00",
+  "configs": [
+   {
+    "ats": "workable",
+    "token": "natixis"
+   }
+  ]
+ },
+ "Nomura": {
+  "at": "2026-11-11T18:03:10+00:00",
+  "configs": []
+ },
+ "Oddo BHF": {
+  "at": "2026-11-11T18:03:10+00:00",
+  "configs": []
+ },
+ "Scotiabank": {
+  "at": "2026-11-11T18:03:10+00:00",
+  "configs": [
+   {
+    "ats": "successfactors",
+    "url": "https://jobs.scotiabank.com"
+   }
+  ]
+ },
+ "Standard Chartered": {
+  "at": "2026-11-11T18:03:10+00:00",
+  "configs": [
+   {
+    "ats": "successfactors",
+    "url": "https://jobs.standardchartered.com"
+   }
+  ]
+ },
+ "Susquehanna": {
+  "at": "2026-11-11T18:03:10+00:00",
+  "configs": [
+   {
+    "ats": "workable",
+    "token": "susquehanna"
+   }
+  ]
+ },
+ "UBS": {
+  "at": "2026-11-11T18:03:10+00:00",
+  "configs": [
+   {
+    "ats": "workable",
+    "token": "ubs"
+   }
+  ]
+ },
+ "UniCredit": {
+  "at": "2026-11-11T18:03:10+00:00",
+  "configs": [
+   {
+    "ats": "avature",
+    "url": "https://careers.unicredit.eu/en_GB/jobsuche/SearchJobs"
+   }
+  ]
+ }
+}
