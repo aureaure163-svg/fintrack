@@ -1,0 +1,241 @@
+# Entreprises suivies par FinTrack.
+#
+# Sources de la liste :
+#   - les 50 entreprises qui publient le plus d'offres sur fyntraq.io/companies (classement public, 11/11/2026)
+#   - les listes Wikipédia des banques d'investissement, fonds de private equity, hedge funds et sociétés
+#     de gestion, croisées avec les jeux de données publics (licence MIT) qui associent ~38 000 entreprises
+#     à leur identifiant Greenhouse / Lever / Ashby / Workday :
+#       github.com/Feashliaa/job-board-aggregator  et  github.com/ConorsCode/open-jobs-data
+#   - quelques boutiques, fonds et sociétés de trading ajoutés à la main
+#
+# Chaque entreprise a soit :
+#   - un connecteur explicite (`ats:` + paramètres), soit
+#   - seulement `careers:` (URL de la page carrières) → la plateforme est détectée automatiquement
+#     au premier passage, puis mémorisée dans scraper/resolved.json.
+# Si un connecteur explicite échoue et que `careers:` est renseigné, la détection prend le relais.
+#
+# Types d'entreprise (mêmes catégories que Fyntraq) :
+#   Bulge Bracket | Elite Boutique | Middle Market | Corporate & Investment Bank | Private Equity |
+#   Asset Management | Advisory & Audit | Real Estate
+#
+# verified: true = point d'accès vérifié le 10-11/11/2026.
+
+defaults:
+  search: [intern, internship, analyst, graduate, associate, trader, stage, stagiaire, VIE, alternance, apprentice, summer, off-cycle, spring]
+
+companies:
+  # ---------------------------------------------------------------- Top 50 Fyntraq + compléments
+  - {name: BNP Paribas, type: Corporate & Investment Bank, ats: html, pages: 'https://group.bnpparibas/en/careers/all-job-offers?page={page}', first_page: 0, max_pages: 80, link: '/careers/job-offer/[^/?#"]+$', careers: 'https://group.bnpparibas/en/careers/all-job-offers'}
+  - {name: Goldman Sachs, type: Bulge Bracket, skip: robots.txt de higher.gs.com interdit la collecte automatique}
+  - {name: Citi, type: Bulge Bracket, ats: workday, url: 'https://citi.wd5.myworkdayjobs.com/2', verified: true}
+  - {name: Deutsche Bank, type: Bulge Bracket, ats: workday, url: 'https://db.wd3.myworkdayjobs.com/DBWebsite', verified: true}
+  - {name: BlackRock, type: Asset Management, ats: workday, url: 'https://blackrock.wd1.myworkdayjobs.com/BlackRock_Professional', verified: true}
+  - {name: EY, type: Advisory & Audit, ats: successfactors, url: 'https://careers.ey.com/ey', careers: 'https://www.ey.com/en_gl/careers/job-search'}
+  - {name: Société Générale, type: Corporate & Investment Bank, ats: taleo, host: socgen.taleo.net, section: sgcareers, careers: 'https://careers.societegenerale.com/en/search'}
+  - {name: OCBC, type: Corporate & Investment Bank, careers: 'https://www.ocbc.com/group/careers', ats: workday, url: 'https://ocbc.wd102.myworkdayjobs.com/external'}
+  - {name: JPMorgan Chase, type: Bulge Bracket, ats: oracle, host: jpmc.fa.oraclecloud.com, site: CX_1001, careers: 'https://careers.jpmorgan.com/global/en/students/programs'}
+  - {name: Jefferies, type: Bulge Bracket, careers: 'https://www.jefferies.com/careers/'}
+  - {name: Citadel Securities, type: Asset Management, ats: sitemap, url: 'https://www.citadelsecurities.com/career-sitemap.xml', link: /careers/details/, careers: 'https://www.citadelsecurities.com/careers/open-opportunities/'}
+  - {name: Deloitte, type: Advisory & Audit, careers: 'https://www.deloitte.com/global/en/careers.html'}
+  - {name: Crédit Agricole CIB, type: Corporate & Investment Bank, careers: 'https://www.ca-cib.com/careers'}
+  - {name: KPMG, type: Advisory & Audit, careers: 'https://kpmg.com/xx/en/careers.html'}
+  - {name: Susquehanna, type: Asset Management, careers: 'https://careers.sig.com/'}
+  - {name: HSBC, type: Corporate & Investment Bank, ats: avature, url: 'https://mycareer.hsbc.com/en_GB/external/SearchJobs', careers: 'https://www.hsbc.com/careers/find-a-job'}
+  - {name: Squarepoint Capital, type: Asset Management, ats: greenhouse, token: squarepointcapital, careers: 'https://www.squarepoint-capital.com/careers'}
+  - {name: Rothschild & Co, type: Elite Boutique, careers: 'https://www.rothschildandco.com/en/careers/students-and-graduates/opportunities/', ats: workday, url: 'https://rothschildandco.wd3.myworkdayjobs.com/rothschildandco_lateral'}
+  - {name: Citadel, type: Asset Management, ats: sitemap, url: 'https://www.citadel.com/career-sitemap.xml', link: /careers/details/, careers: 'https://www.citadel.com/careers/open-opportunities/'}
+  - {name: Oddo BHF, type: Middle Market, careers: 'https://recrutement.altays-progiciels.com/oddo/'}
+  - {name: Barclays, type: Bulge Bracket, ats: workday, url: 'https://barclays.wd3.myworkdayjobs.com/External_Career_Site_Barclays', verified: true}
+  - {name: Qube Research and Technologies, type: Asset Management, careers: 'https://www.qube-rt.com/careers', ats: greenhouse, token: quberesearchandtechnologies}
+  - {name: Lazard, type: Elite Boutique, careers: 'https://www.lazard.com/careers/jobs/'}
+  - {name: Morgan Stanley, type: Bulge Bracket, ats: workday, url: 'https://ms.wd5.myworkdayjobs.com/External', verified: true}
+  - {name: Natixis, type: Corporate & Investment Bank, careers: 'https://recrutement.groupebpce.fr/'}
+  - {name: UBS, type: Bulge Bracket, careers: 'https://www.ubs.com/global/en/careers/search-jobs.html'}
+  - {name: MUFG, type: Corporate & Investment Bank, ats: workday, url: 'https://mufgub.wd3.myworkdayjobs.com/MUFG-Careers'}
+  - {name: Houlihan Lokey, type: Elite Boutique, ats: workday, url: 'https://hl.wd1.myworkdayjobs.com/Campus', verified: true, careers: 'https://hl.com/careers/'}
+  - {name: Jump Trading, type: Asset Management, ats: greenhouse, token: jumptrading, verified: true}
+  - {name: UniCredit, type: Corporate & Investment Bank, careers: 'https://careers.unicredit.eu/'}
+  - {name: Nomura, type: Corporate & Investment Bank, careers: 'https://www.nomura.com/careers/'}
+  - {name: Crédit Agricole, type: Corporate & Investment Bank, careers: 'https://jobs.credit-agricole.com/'}
+  - {name: Alantra, type: Middle Market, careers: 'https://www.alantra.com/careers/', ats: workday, url: 'https://alantra.wd3.myworkdayjobs.com/alantra'}
+  - {name: Bpifrance, type: Private Equity, careers: 'https://www.bpifrance.fr/nous-rejoindre'}
+  - {name: Ardian, type: Private Equity, careers: 'https://www.ardian.com/careers', ats: workday, url: 'https://ardian.wd103.myworkdayjobs.com/ardiancareers'}
+  - {name: Eight Advisory, type: Advisory & Audit, careers: 'https://www.8advisory.com/careers'}
+  - {name: Standard Chartered, type: Corporate & Investment Bank, careers: 'https://www.sc.com/en/careers/'}
+  - {name: Tower Research Capital, type: Asset Management, ats: greenhouse, token: towerresearchcapital, verified: true}
+  - {name: ING, type: Corporate & Investment Bank, careers: 'https://www.ing.jobs/', ats: workday, url: ['https://ing.wd3.myworkdayjobs.com/icsfradir', 'https://ing.wd3.myworkdayjobs.com/icsgblcor']}
+  - {name: Millennium, type: Asset Management, careers: 'https://www.mlp.com/careers/'}
+  - {name: DRW, type: Asset Management, ats: greenhouse, token: drweng, careers: 'https://drw.com/work-at-drw/listings'}
+  - {name: Alvarez & Marsal, type: Advisory & Audit, careers: 'https://www.alvarezandmarsal.com/careers'}
+  - {name: CITIC CLSA, type: Corporate & Investment Bank, careers: 'https://www.clsa.com/careers/'}
+  - {name: FTI Consulting, type: Advisory & Audit, careers: 'https://www.fticonsulting.com/careers'}
+  - {name: Jane Street, type: Asset Management, ats: greenhouse, token: janestreet, verified: true}
+  - {name: PwC, type: Advisory & Audit, careers: 'https://www.pwc.com/gx/en/careers.html', ats: workday, url: ['https://pwc.wd3.myworkdayjobs.com/global_campus_careers', 'https://pwc.wd3.myworkdayjobs.com/global_experienced_careers', 'https://pwc.wd3.myworkdayjobs.com/us_entry_level_careers', 'https://pwc.wd3.myworkdayjobs.com/us_experienced_careers']}
+  - {name: Scotiabank, type: Corporate & Investment Bank, careers: 'https://jobs.scotiabank.com/'}
+  - {name: Falkensteg, type: Advisory & Audit, careers: 'https://www.falkensteg.com/karriere'}
+  - {name: Point72, type: Asset Management, ats: greenhouse, token: point72, verified: true}
+  - {name: La Banque Postale, type: Corporate & Investment Bank, careers: 'https://www.labanquepostale.com/groupe/recrutement.html'}
+  - {name: Blackstone, type: Private Equity, careers: 'https://www.blackstone.com/careers/', ats: workday, url: ['https://blackstone.wd1.myworkdayjobs.com/blackstone_campus_careers', 'https://blackstone.wd1.myworkdayjobs.com/blackstone_careers']}
+  - {name: KKR, type: Private Equity, careers: 'https://www.kkr.com/careers', ats: greenhouse, token: kkr}
+  - {name: Evercore, type: Elite Boutique, careers: 'https://www.evercore.com/careers/'}
+  - {name: Moelis & Company, type: Elite Boutique, careers: 'https://www.moelis.com/careers/', ats: workday, url: ['https://moelis.wd1.myworkdayjobs.com/experienced-hires', 'https://moelis.wd1.myworkdayjobs.com/university-hires']}
+  - {name: Mediobanca, type: Corporate & Investment Bank, careers: 'https://www.mediobanca.com/en/work-with-us/index.html'}
+  - {name: IMC Trading, type: Asset Management, ats: greenhouse, token: imc, verified: true}
+  - {name: Flow Traders, type: Asset Management, ats: greenhouse, token: flowtraders, verified: true}
+  - {name: Mizuho, type: Corporate & Investment Bank, ats: workday, url: 'https://mizuho.wd1.myworkdayjobs.com/mizuhoamericas'}
+  - {name: Santander, type: Corporate & Investment Bank, ats: workday, url: 'https://santander.wd3.myworkdayjobs.com/santandercareers'}
+
+  # ---------------------------------------------------------------- Ajoutés depuis les listes publiques
+  - {name: DBS, type: Corporate & Investment Bank, ats: workday, url: 'https://dbs.wd3.myworkdayjobs.com/dbs_careers'}
+  - {name: Desjardins, type: Corporate & Investment Bank, ats: workday, url: ['https://desjardins.wd10.myworkdayjobs.com/desjardins', 'https://desjardins.wd10.myworkdayjobs.com/etudiantsetstagiaires']}
+  - {name: KeyBanc Capital Markets, type: Middle Market, ats: workday, url: 'https://keybank.wd5.myworkdayjobs.com/external_career_site'}
+  - {name: CIBC, type: Corporate & Investment Bank, ats: workday, url: 'https://cibc.wd3.myworkdayjobs.com/campus'}
+  - {name: BBVA, type: Corporate & Investment Bank, ats: workday, url: 'https://bbva.wd3.myworkdayjobs.com/bbva'}
+  - {name: Truist Securities, type: Corporate & Investment Bank, ats: workday, url: 'https://truist.wd1.myworkdayjobs.com/careers'}
+  - {name: PNC, type: Corporate & Investment Bank, ats: workday, url: 'https://pnc.wd5.myworkdayjobs.com/external'}
+  - {name: Harris Williams, type: Middle Market, ats: workday, url: 'https://pnc.wd5.myworkdayjobs.com/harriswilliams'}
+  - {name: Capital One, type: Corporate & Investment Bank, ats: workday, url: ['https://capitalone.wd12.myworkdayjobs.com/capital_one', 'https://capitalone.wd1.myworkdayjobs.com/capital_one']}
+  - {name: Fifth Third, type: Corporate & Investment Bank, ats: workday, url: 'https://fifththird.wd5.myworkdayjobs.com/53careers'}
+  - {name: U.S. Bank, type: Corporate & Investment Bank, ats: workday, url: 'https://usbank.wd1.myworkdayjobs.com/us_bank_careers'}
+  - {name: Raiffeisen, type: Corporate & Investment Bank, ats: workday, url: 'https://raiffeisen.wd3.myworkdayjobs.com/jobs-raiffeisen'}
+  - {name: Julius Baer, type: Corporate & Investment Bank, ats: workday, url: 'https://juliusbaer.wd3.myworkdayjobs.com/external'}
+  - {name: Lombard Odier, type: Corporate & Investment Bank, ats: workday, url: 'https://lombardodier.wd3.myworkdayjobs.com/lombard_odier_careers'}
+  - {name: Raymond James, type: Middle Market, ats: workday, url: ['https://raymondjames.wd1.myworkdayjobs.com/raymondjamescareers', 'https://raymondjames.wd1.myworkdayjobs.com/raymondjamesearlycareers']}
+  - {name: Piper Sandler, type: Middle Market, ats: workday, url: 'https://pipersandler.wd501.myworkdayjobs.com/piper_sandler_careers'}
+  - {name: Saxo Bank, type: Corporate & Investment Bank, ats: workday, url: 'https://saxobank.wd3.myworkdayjobs.com/careeratsaxobank'}
+  - {name: B. Riley Securities, type: Middle Market, ats: greenhouse, token: brileysecurities}
+  - {name: D.A. Davidson, type: Middle Market, ats: lever, token: dadavidson}
+  - {name: PJT Partners, type: Elite Boutique, ats: workday, url: 'https://pjtpartners.wd1.myworkdayjobs.com/careers'}
+  - {name: Guggenheim Securities, type: Elite Boutique, ats: workday, url: ['https://guggenheim.wd1.myworkdayjobs.com/guggenheim_careers', 'https://guggenheim.wd1.myworkdayjobs.com/guggenheim_careers_campus', 'https://guggenheim.wd1.myworkdayjobs.com/guggenheim_undergraduate_programs']}
+  - {name: Greenhill, type: Elite Boutique, ats: workday, url: 'https://greenhill.wd5.myworkdayjobs.com/searchjobs'}
+  - {name: Ducera Partners, type: Elite Boutique, ats: greenhouse, token: ducerapartners}
+  - {name: LionTree, type: Elite Boutique, ats: greenhouse, token: liontree}
+  - {name: Financial Technology Partners, type: Elite Boutique, ats: greenhouse, token: financialtechnologypartners}
+  - {name: Ardea Partners, type: Elite Boutique, ats: ashby, token: ardea-partners}
+  - {name: Portage Point Partners, type: Advisory & Audit, ats: lever, token: portagepointpartners}
+  - {name: Chatham Financial, type: Advisory & Audit, ats: greenhouse, token: chathamfinancial}
+  - {name: Bain Capital, type: Private Equity, ats: workday, url: 'https://baincapital.wd1.myworkdayjobs.com/external_public'}
+  - {name: General Atlantic, type: Private Equity, ats: greenhouse, token: generalatlantic}
+  - {name: HarbourVest, type: Private Equity, ats: workday, url: 'https://harbourvest.wd5.myworkdayjobs.com/hvp'}
+  - {name: Blue Owl, type: Private Equity, ats: workday, url: 'https://blueowl.wd1.myworkdayjobs.com/blueowl'}
+  - {name: GTCR, type: Private Equity, ats: greenhouse, token: gtcr}
+  - {name: Adams Street Partners, type: Private Equity, ats: greenhouse, token: [adamsstreetpartners, adamsstreetpartnersearlycareers]}
+  - {name: Cerberus, type: Private Equity, ats: workday, url: 'https://cerberus.wd1.myworkdayjobs.com/cerberuscareers'}
+  - {name: ICG, type: Private Equity, ats: workday, url: 'https://icg.wd3.myworkdayjobs.com/external_careers'}
+  - {name: Brookfield, type: Private Equity, ats: workday, url: 'https://brookfield.wd5.myworkdayjobs.com/brookfield'}
+  - {name: Oaktree, type: Private Equity, ats: workday, url: 'https://oaktree.wd1.myworkdayjobs.com/oaktree'}
+  - {name: Sixth Street, type: Private Equity, ats: greenhouse, token: sixthstreet}
+  - {name: Triton Partners, type: Private Equity, ats: workday, url: 'https://tritonpartners.wd3.myworkdayjobs.com/external'}
+  - {name: OMERS, type: Private Equity, ats: workday, url: 'https://omers.wd3.myworkdayjobs.com/omers_external'}
+  - {name: CDPQ, type: Private Equity, ats: workday, url: ['https://cdpq.wd10.myworkdayjobs.com/cdpq', 'https://cdpq.wd10.myworkdayjobs.com/cdpq-recrutement-universitaire']}
+  - {name: PSP Investments, type: Private Equity, ats: workday, url: 'https://investpsp.wd3.myworkdayjobs.com/psp_careers'}
+  - {name: Providence Equity, type: Private Equity, ats: workday, url: 'https://provequity.wd5.myworkdayjobs.com/pep_external_career_site'}
+  - {name: PSG Equity, type: Private Equity, ats: workday, url: 'https://psgequity.wd5.myworkdayjobs.com/psg_external_careers'}
+  - {name: Summit Partners, type: Private Equity, ats: greenhouse, token: summitpartnerslp}
+  - {name: Roark Capital, type: Private Equity, ats: greenhouse, token: roarkcapitalgroup}
+  - {name: Alpine Investors, type: Private Equity, ats: greenhouse, token: alpineinvestors}
+  - {name: Bertram Capital, type: Private Equity, ats: greenhouse, token: bertramcapitalmanagement}
+  - {name: LLR Partners, type: Private Equity, ats: greenhouse, token: llrpartnersjobs}
+  - {name: Pretium Partners, type: Private Equity, ats: greenhouse, token: pretiumpartnersllc}
+  - {name: Bessemer Venture Partners, type: Private Equity, ats: greenhouse, token: bessemerventurepartners}
+  - {name: Thrive Capital, type: Private Equity, ats: greenhouse, token: thrivecapital}
+  - {name: Volition Capital, type: Private Equity, ats: ashby, token: volition-capital}
+  - {name: Yale Investments Office, type: Asset Management, ats: greenhouse, token: yaleinvestmentsoffice}
+  - {name: Commonfund, type: Asset Management, ats: ashby, token: common-fund}
+  - {name: Marshall Wace, type: Asset Management, ats: greenhouse, token: marshallwace}
+  - {name: Wellington Management, type: Asset Management, ats: workday, url: ['https://wellington.wd5.myworkdayjobs.com/campus', 'https://wellington.wd5.myworkdayjobs.com/external']}
+  - {name: Brevan Howard, type: Asset Management, ats: workday, url: 'https://brevanhoward.wd3.myworkdayjobs.com/bh_externalcareers'}
+  - {name: PIMCO, type: Asset Management, ats: workday, url: 'https://pimco.wd1.myworkdayjobs.com/pimco-careers'}
+  - {name: ExodusPoint, type: Asset Management, ats: greenhouse, token: exoduspoint}
+  - {name: Fortress Investment Group, type: Asset Management, ats: workday, url: 'https://fortress.wd503.myworkdayjobs.com/careers'}
+  - {name: GCM Grosvenor, type: Asset Management, ats: greenhouse, token: gcmgrosvenor}
+  - {name: PDT Partners, type: Asset Management, ats: greenhouse, token: pdtpartners}
+  - {name: Schonfeld, type: Asset Management, ats: greenhouse, token: schonfeld}
+  - {name: Sculptor, type: Asset Management, ats: workday, url: 'https://sculptor.wd12.myworkdayjobs.com/sculptor_external_career_site'}
+  - {name: WorldQuant, type: Asset Management, ats: greenhouse, token: worldquant}
+  - {name: Voleon, type: Asset Management, ats: lever, token: voleon}
+  - {name: Engineers Gate, type: Asset Management, ats: greenhouse, token: engineersgate}
+  - {name: G-Research, type: Asset Management, ats: workday, url: ['https://gresearch.wd103.myworkdayjobs.com/g-research', 'https://gresearch.wd3.myworkdayjobs.com/g-research']}
+  - {name: GSA Capital, type: Asset Management, ats: greenhouse, token: gsacapital}
+  - {name: Winton, type: Asset Management, ats: greenhouse, token: winton}
+  - {name: Arrowstreet Capital, type: Asset Management, ats: workday, url: 'https://arrowstreetcapital.wd5.myworkdayjobs.com/arrowstreet'}
+  - {name: American Century, type: Asset Management, ats: workday, url: ['https://americancentury.wd5.myworkdayjobs.com/americancenturyinvestments', 'https://americancentury.wd5.myworkdayjobs.com/avantiscareers']}
+  - {name: Ameriprise, type: Asset Management, ats: workday, url: 'https://ameriprise.wd5.myworkdayjobs.com/ameriprise'}
+  - {name: Barings, type: Asset Management, ats: workday, url: ['https://barings.wd1.myworkdayjobs.com/barings', 'https://barings.wd1.myworkdayjobs.com/early_talent']}
+  - {name: Brown Advisory, type: Asset Management, ats: workday, url: ['https://brownadvisory.wd1.myworkdayjobs.com/brown', 'https://brownadvisory.wd1.myworkdayjobs.com/brown-interns']}
+  - {name: Dimensional Fund Advisors, type: Asset Management, ats: workday, url: 'https://dimensional.wd5.myworkdayjobs.com/dfa_careers'}
+  - {name: Dodge & Cox, type: Asset Management, ats: workday, url: 'https://dodgeandcox.wd5.myworkdayjobs.com/dodgecox'}
+  - {name: Franklin Templeton, type: Asset Management, ats: workday, url: 'https://franklintempleton.wd5.myworkdayjobs.com/primary-external-1'}
+  - {name: Invesco, type: Asset Management, ats: workday, url: ['https://invesco.wd1.myworkdayjobs.com/ivz', 'https://invesco.wd1.myworkdayjobs.com/ivzearlycareers']}
+  - {name: MFS, type: Asset Management, ats: workday, url: 'https://mfs.wd1.myworkdayjobs.com/mfs-careers'}
+  - {name: PineBridge, type: Asset Management, ats: workday, url: ['https://pinebridge.wd5.myworkdayjobs.com/pinebridge_campus_site', 'https://pinebridge.wd5.myworkdayjobs.com/pinebridge_career_site']}
+  - {name: Russell Investments, type: Asset Management, ats: workday, url: 'https://russell.wd5.myworkdayjobs.com/russellinvestments'}
+  - {name: T. Rowe Price, type: Asset Management, ats: workday, url: ['https://troweprice.wd5.myworkdayjobs.com/troweprice', 'https://troweprice.wd5.myworkdayjobs.com/trowepriceinternational']}
+  - {name: Vanguard, type: Asset Management, ats: workday, url: 'https://vanguard.wd5.myworkdayjobs.com/vanguard_external'}
+  - {name: WisdomTree, type: Asset Management, ats: lever, token: wisdomtree}
+  - {name: Baillie Gifford, type: Asset Management, ats: workday, url: ['https://bailliegifford.wd3.myworkdayjobs.com/bailliegiffordcareers', 'https://bailliegifford.wd3.myworkdayjobs.com/bailliegiffordclientmanager', 'https://bailliegifford.wd3.myworkdayjobs.com/bailliegiffordearlycareers']}
+  - {name: Robeco, type: Asset Management, ats: workday, url: 'https://robeco.wd3.myworkdayjobs.com/robecoexternalcareers'}
+  - {name: abrdn, type: Asset Management, ats: workday, url: 'https://abrdn.wd3.myworkdayjobs.com/abrdn'}
+  - {name: Fiera Capital, type: Asset Management, ats: workday, url: 'https://fieracapital.wd3.myworkdayjobs.com/career'}
+  - {name: Guggenheim Investments, type: Asset Management, ats: workday, url: 'https://guggenheiminvestment.wd5.myworkdayjobs.com/external'}
+  - {name: Acadian Asset Management, type: Asset Management, ats: greenhouse, token: acadianassetmanagementllc}
+  - {name: Ariel Investments, type: Asset Management, ats: greenhouse, token: arielinvestments}
+  - {name: Baron Capital, type: Asset Management, ats: greenhouse, token: baroncapital}
+  - {name: BlueCrest Capital, type: Asset Management, ats: greenhouse, token: bluecrestcapitalmanagement}
+  - {name: Bracebridge Capital, type: Asset Management, ats: greenhouse, token: bracebridgecapital}
+  - {name: Capstone Investment Advisors, type: Asset Management, ats: greenhouse, token: capstoneinvestmentadvisors}
+  - {name: Graham Capital, type: Asset Management, ats: greenhouse, token: grahamcapitalmanagement}
+  - {name: Grayscale, type: Asset Management, ats: greenhouse, token: grayscaleinvestments}
+  - {name: ICONIQ, type: Asset Management, ats: greenhouse, token: iconiqcapital}
+  - {name: Pzena, type: Asset Management, ats: greenhouse, token: pzenainvestmentmanagement}
+  - {name: RA Capital, type: Asset Management, ats: greenhouse, token: racapitalmanagementllc}
+  - {name: RTW Investments, type: Asset Management, ats: greenhouse, token: rtwinvestments}
+  - {name: Sands Capital, type: Asset Management, ats: greenhouse, token: sandscapitalmanagementllc}
+  - {name: Viking Global, type: Asset Management, ats: greenhouse, token: vikingglobalinvestors}
+  - {name: Walleye Capital, type: Asset Management, ats: greenhouse, token: [walleyecapital-external-internships, walleyecapital-external-students]}
+  - {name: Weiss Asset Management, type: Asset Management, ats: greenhouse, token: weissassetmanagement}
+  - {name: Abdiel Capital, type: Asset Management, ats: greenhouse, token: abdielcapital}
+  - {name: Pantera Capital, type: Asset Management, ats: greenhouse, token: panteracapitalcareers}
+  - {name: Polychain Capital, type: Asset Management, ats: greenhouse, token: polychaincapital}
+  - {name: Casdin Capital, type: Asset Management, ats: lever, token: casdincapital}
+  - {name: Symmetry Investments, type: Asset Management, ats: lever, token: symmetryinvestments}
+  - {name: Satori Capital, type: Asset Management, ats: lever, token: satoricapital}
+  - {name: Bitwise, type: Asset Management, ats: lever, token: bitwiseinvestments}
+  - {name: Akuna Capital, type: Asset Management, ats: greenhouse, token: akunacapital}
+  - {name: Maven Securities, type: Asset Management, ats: greenhouse, token: mavensecuritiesholdingltd}
+  - {name: Virtu Financial, type: Asset Management, ats: greenhouse, token: virtu}
+  - {name: Belvedere Trading, type: Asset Management, ats: lever, token: belvederetrading}
+  - {name: Geneva Trading, type: Asset Management, ats: greenhouse, token: genevatrading}
+  - {name: Radix Trading, type: Asset Management, ats: greenhouse, token: radixtrading}
+  - {name: HAP Capital, type: Asset Management, ats: lever, token: hap-capital}
+  - {name: Vatic Labs, type: Asset Management, ats: greenhouse, token: vaticlabs}
+  - {name: Old Mission, type: Asset Management, ats: greenhouse, token: oldmissioncapital}
+  - {name: XTX Markets, type: Asset Management, ats: greenhouse, token: xtxmarketstechnologies}
+  - {name: Chicago Trading Company, type: Asset Management, ats: greenhouse, token: chicagotradingcampus}
+  - {name: DV Trading, type: Asset Management, ats: greenhouse, token: dvtrading}
+  - {name: Eclipse Trading, type: Asset Management, ats: greenhouse, token: eclipsetrading}
+  - {name: Graviton Research Capital, type: Asset Management, ats: greenhouse, token: gravitonresearchcapital}
+  - {name: Quadrature Capital, type: Asset Management, ats: greenhouse, token: quadraturecapital}
+  - {name: Simplex Trading, type: Asset Management, ats: greenhouse, token: simplextrading}
+  - {name: Whistler Trading, type: Asset Management, ats: greenhouse, token: whistlertrading}
+  - {name: Pico Quantitative Trading, type: Asset Management, ats: greenhouse, token: picoquantitativetrading}
+  - {name: AlphaGrep, type: Asset Management, ats: greenhouse, token: alphagrepsecurities}
+  - {name: Parallax Volatility Advisers, type: Asset Management, ats: greenhouse, token: parallaxvolatilityadvisers}
+  - {name: Quantlab, type: Asset Management, ats: lever, token: quantlabs}
+  - {name: Valkyrie Trading, type: Asset Management, ats: lever, token: valkyrietrading}
+  - {name: Ansatz Capital, type: Asset Management, ats: lever, token: ansatzcapital}
+  - {name: Wintermute, type: Asset Management, ats: lever, token: wintermute-trading}
+  - {name: GSR, type: Asset Management, ats: greenhouse, token: gsrmarkets}
+  - {name: B2C2, type: Asset Management, ats: greenhouse, token: b2c2}
+  - {name: Keyrock, type: Asset Management, ats: ashby, token: keyrock}
+  - {name: Selini Capital, type: Asset Management, ats: greenhouse, token: selinicapital}
+  - {name: BDO, type: Advisory & Audit, ats: workday, url: 'https://bdo.wd3.myworkdayjobs.com/bdo'}
+  - {name: RSM, type: Advisory & Audit, ats: workday, url: 'https://rsm.wd1.myworkdayjobs.com/rsmcareers'}
+  - {name: Morningstar, type: Advisory & Audit, ats: workday, url: 'https://morningstar.wd5.myworkdayjobs.com/americas'}
+  - {name: LSEG, type: Advisory & Audit, ats: workday, url: ['https://lseg.wd3.myworkdayjobs.com/careers', 'https://lseg.wd3.myworkdayjobs.com/graduate_careers']}
+  - {name: JLL, type: Real Estate, ats: workday, url: ['https://jll.wd1.myworkdayjobs.com/jllcareers', 'https://jll.wd1.myworkdayjobs.com/lasallecareers']}
+  - {name: Colliers, type: Real Estate, ats: workday, url: 'https://colliers.wd3.myworkdayjobs.com/colliers-external-career-site'}
+  - {name: Brookfield Properties, type: Real Estate, ats: greenhouse, token: brookfieldproperties}
+
+# Business France — toutes les offres VIE publiées (filtrées ensuite sur les métiers finance)
+vie_businessfrance: true
