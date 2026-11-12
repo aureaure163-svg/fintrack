@@ -356,3 +356,186 @@ CONNECTORS = {
     "workday": workday, "oracle": oracle, "workable": workable, "recruitee": recruitee, "personio": personio,
     "taleo": taleo, "successfactors": successfactors, "avature": avature, "html": html, "sitemap": sitemap,
 }
+
+
+# --------------------------------------------------------------------------- agrégateurs (sitemaps publics)
+# Welcome to the Jungle et Jobteaser publient toutes leurs offres dans des sitemaps XML destinés aux
+# robots (autorisés par leurs robots.txt). On lit ces sitemaps, sans charger les pages d'offres.
+
+import gzip  # noqa: E402
+import unicodedata  # noqa: E402
+
+GENDER = re.compile(r"[-_ ](h-?f|f-?h|m-?f|f-?m|m-?w-?d|w-?m-?d|m-?f-?d|f-?h-?x|h-?f-?x|x-?f-?h|hf|fh|mfd|wmd|e)$")
+
+
+def fetch_bytes(url: str) -> bytes:
+    http.check_robots(url)
+    r = http.s.get(url, timeout=60)
+    r.raise_for_status()
+    data = r.content
+    return gzip.decompress(data) if data[:2] == b"\x1f\x8b" else data
+
+
+def sitemap_entries(url: str):
+    xml = fetch_bytes(url).decode("utf-8", "replace")
+    for m in re.finditer(r"<url>(.*?)</url>", xml, re.S):
+        loc = re.search(r"<loc>\s*(.*?)\s*</loc>", m.group(1))
+        mod = re.search(r"<lastmod>\s*(.*?)\s*</lastmod>", m.group(1))
+        if loc:
+            yield htmllib.unescape(loc.group(1)), (mod.group(1) if mod else "")
+
+
+def slug_title(slug: str) -> str:
+    s = slug.strip("-")
+    for _ in range(2):
+        s = GENDER.sub("", s)
+    s = s.replace("-", " ").strip()
+    s = re.sub(r"(?<![a-z])m a(?![a-z])", "M&A", s)
+    return s[:1].upper() + s[1:]
+
+
+def norm_slug(name: str) -> str:
+    n = unicodedata.normalize("NFKD", name).encode("ascii", "ignore").decode().lower()
+    n = re.sub(r"\(.*?\)", "", n).replace("&", " ")
+    return "-".join(re.findall(r"[a-z0-9]+", n))
+
+
+def recent(lastmod: str, days: int) -> bool:
+    try:
+        d = datetime.fromisoformat(lastmod.replace("Z", "+00:00"))
+        return d >= NOW - timedelta(days=days)
+    except ValueError:
+        return True
+
+
+def wttj(c):
+    """Welcome to the Jungle : /{lang}/companies/{entreprise}/jobs/{titre}_{ville}[_{id}]"""
+    index = fetch_bytes("https://www.welcometothejungle.com/sitemaps/index.xml.gz").decode("utf-8", "replace")
+    maps = re.findall(r"<loc>\s*(\S*job-listings\.\d+\.xml\.gz)\s*</loc>", index)
+    pat = re.compile(r"welcometothejungle\.com/(fr|en|es|cs|sk)/companies/([^/]+)/jobs/([^/?#]+)")
+    seen = set()
+    for sm in maps:
+        for url, mod in sitemap_entries(sm):
+            m = pat.search(url)
+            if not m or not recent(mod, c.get("days", 45)):
+                continue
+            lang, comp, rest = m.groups()
+            key = (comp, rest)
+            if key in seen:
+                continue
+            seen.add(key)
+            parts = rest.split("_")
+            title = slug_title(parts[0])
+            city = parts[1].replace("-", " ").title() if len(parts) > 1 else ""
+            yield {"company_slug": re.sub(r"-\d+$", "", comp), "title": title, "location": city, "url": url,
+                   "posted": mod, "source": "Welcome to the Jungle"}
+
+
+def jobteaser(c):
+    """Jobteaser : /{lang}/job-offers/{uuid}-{entreprise}-{titre} (entreprise et titre fusionnés dans le slug)."""
+    index = fetch_bytes("https://assets-cf.jobteaser.com/sitemaps/sitemap.xml").decode("utf-8", "replace")
+    maps = re.findall(r"<loc>\s*(\S*job_ads_sitemap\d*\.xml)\s*</loc>", index)
+    pat = re.compile(r"jobteaser\.com/([a-z]{2})/job-offers/([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})-([^/?#]+)")
+    best = {}
+    for sm in maps:
+        for url, mod in sitemap_entries(sm):
+            m = pat.search(url)
+            if not m or not recent(mod, c.get("days", 45)):
+                continue
+            lang, uid, slug = m.groups()
+            if uid in best and best[uid]["lang"] == "fr":
+                continue
+            best[uid] = {"lang": lang, "slug": slug, "url": url, "posted": mod}
+    for b in best.values():
+        yield {"slug": b["slug"], "url": b["url"], "posted": b["posted"], "source": "Jobteaser"}
+
+
+# --------------------------------------------------------------------------- LinkedIn (via tes alertes emploi par email)
+# LinkedIn interdit la collecte automatique de son site. À la place, on lit les emails d'alerte emploi que
+# LinkedIn t'envoie (jobalerts-noreply@linkedin.com) dans ta boîte mail, via IMAP.
+# Identifiants lus dans les variables d'environnement (secrets GitHub) : IMAP_USER, IMAP_PASSWORD, IMAP_HOST.
+
+import email as _email  # noqa: E402
+import imaplib  # noqa: E402
+import os  # noqa: E402
+from email.utils import parsedate_to_datetime  # noqa: E402
+
+LI_JOB = re.compile(r"https?://(?:[a-z]+\.)?linkedin\.com/(?:comm/)?jobs/view/(\d{6,})")
+
+
+def _parts(msg):
+    text, html_ = "", ""
+    for part in (msg.walk() if msg.is_multipart() else [msg]):
+        ctype = part.get_content_type()
+        if ctype not in ("text/plain", "text/html"):
+            continue
+        payload = part.get_payload(decode=True) or b""
+        s = payload.decode(part.get_content_charset() or "utf-8", "replace")
+        if ctype == "text/plain":
+            text += s
+        else:
+            html_ += s
+    return text, html_
+
+
+def parse_linkedin_alert(text: str, html_: str) -> list[dict]:
+    """Extrait (titre, entreprise, lieu, id) des emails d'alerte LinkedIn (version texte, sinon HTML)."""
+    jobs, seen = [], set()
+    if text:
+        lines = [ln.strip() for ln in text.splitlines()]
+        for i, ln in enumerate(lines):
+            m = LI_JOB.search(ln)
+            if not m or m.group(1) in seen:
+                continue
+            prev = [x for x in lines[max(0, i - 6):i] if x and not LI_JOB.search(x)
+                    and not re.match(r"^(view job|voir l.offre|-+|apply|postuler|actively recruiting|.*connections?$)", x, re.I)]
+            if len(prev) >= 3:
+                title, company, loc = prev[-3], prev[-2], prev[-1]
+            elif len(prev) == 2:
+                title, company, loc = prev[0], prev[1], ""
+            else:
+                continue
+            if "·" in company and not loc:
+                company, loc = [x.strip() for x in company.split("·", 1)]
+            seen.add(m.group(1))
+            jobs.append({"id": m.group(1), "title": title, "company": company, "location": loc})
+    if not jobs and html_:
+        for url, title, after in anchors(html_, LI_JOB.pattern, "https://www.linkedin.com/"):
+            jid = LI_JOB.search(url).group(1)
+            if jid in seen or not title or len(title) < 4 or re.match(r"(?i)^(view|voir|see|apply)", title):
+                continue
+            bits = [b.strip() for b in re.split(r"·|\|", after) if b.strip()]
+            seen.add(jid)
+            jobs.append({"id": jid, "title": title, "company": bits[0] if bits else "",
+                         "location": bits[1] if len(bits) > 1 else ""})
+    return jobs
+
+
+def linkedin_alerts(c):
+    user, pwd = os.environ.get("IMAP_USER"), os.environ.get("IMAP_PASSWORD")
+    if not user or not pwd:
+        raise RuntimeError("secrets IMAP_USER / IMAP_PASSWORD absents (voir README, section LinkedIn)")
+    box = imaplib.IMAP4_SSL(os.environ.get("IMAP_HOST", "imap.gmail.com"))
+    try:
+        box.login(user, pwd)
+        box.select("INBOX", readonly=True)
+        since = (NOW - timedelta(days=c.get("days", 21))).strftime("%d-%b-%Y")
+        _, data = box.search(None, f'(FROM "linkedin.com" SINCE {since})')
+        for num in (data[0].split() if data and data[0] else [])[-400:]:
+            _, msg_data = box.fetch(num, "(RFC822)")
+            msg = _email.message_from_bytes(msg_data[0][1])
+            sender = (msg.get("From") or "").lower()
+            if "jobalerts" not in sender and "jobs-listings" not in sender and "jobs-noreply" not in sender:
+                continue
+            try:
+                posted = parsedate_to_datetime(msg.get("Date")).astimezone(timezone.utc).isoformat()
+            except (TypeError, ValueError):
+                posted = ""
+            for j in parse_linkedin_alert(*_parts(msg)):
+                yield {"company": j["company"], "title": j["title"], "location": j["location"],
+                       "url": f"https://www.linkedin.com/jobs/view/{j['id']}/", "posted": posted, "source": "LinkedIn"}
+    finally:
+        try:
+            box.logout()
+        except Exception:  # noqa: BLE001
+            pass

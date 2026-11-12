@@ -32,13 +32,14 @@ import yaml
 sys.path.insert(0, str(Path(__file__).parent))
 from classify import (classify_contract, classify_specialisation, parse_location,  # noqa: E402
                       parse_start)
-from connectors import CONNECTORS, SEARCH_TERMS, http, raw  # noqa: E402
+from connectors import (CONNECTORS, SEARCH_TERMS, http, jobteaser, linkedin_alerts, norm_slug, raw,  # noqa: E402
+                        wttj)
 from discover import discover  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT_DIR = ROOT / "site" / "data"
 CONFIG = Path(__file__).parent / "sources.yaml"
-RESOLVED = Path(__file__).parent / "resolved.json"
+RESOLVED = Path(__file__).parent / "resolved_v2.json"  # v2 : ignore les détections erronées du premier passage
 NOW = datetime.now(timezone.utc)
 REDISCOVER_AFTER = timedelta(days=7)
 
@@ -104,6 +105,66 @@ def src_vie(c):
             break
 
 
+# --------------------------------------------------------------------------- agrégateurs
+
+SLUG_STOP = {"group", "groupe", "the", "co", "company", "sa", "sas", "ag", "gmbh", "plc", "ltd", "llc", "inc", "spa",
+             "management", "partners", "capital", "bank", "asset", "investments", "france"}
+
+
+def company_index(companies: list[dict]) -> dict[str, dict]:
+    idx = {}
+    for c in companies:
+        full = norm_slug(c["name"])
+        core = "-".join(w for w in full.split("-") if w not in SLUG_STOP)
+        for v in {full, core}:
+            if len(v.replace("-", "")) >= 3 and v not in idx:
+                idx[v] = c
+    return idx
+
+
+def match_company(slug: str, idx: dict, prefix: bool = False):
+    """Entreprise suivie correspondant au slug (exact pour WTTJ, préfixe pour Jobteaser)."""
+    s = re.sub(r"^groupe?-", "", slug)
+    if not prefix:
+        return idx.get(slug) or idx.get(s)
+    best = None
+    for cand in (slug, s):
+        parts = cand.split("-")
+        for n in range(min(6, len(parts) - 1), 0, -1):
+            v = "-".join(parts[:n])
+            c = idx.get(v)
+            if c and (len(v) >= 5 or n >= 2):
+                return c, "-".join(parts[n:])
+    return best
+
+
+def src_aggregators(companies: list[dict], which: str):
+    idx = company_index(companies)
+    if which == "wttj":
+        for j in wttj({}):
+            c = match_company(j["company_slug"], idx)
+            if c:
+                yield raw(c["name"], c["type"], j["title"], j["location"], j["url"], j["posted"], j["source"])
+            else:  # entreprise non suivie : on ne garde que les métiers front office (M&A, PE, marchés…)
+                spec = classify_specialisation(j["title"])
+                is_vie = bool(re.search(r"(?<![a-z])v\.?i\.?e(?![a-z])", j["title"], re.I))
+                if spec and (is_vie or (spec[1] == "Front office" and spec[0] != "Programmes multi-métiers")):
+                    name = j["company_slug"].replace("-", " ").title()
+                    yield raw(name, "Autre", j["title"], j["location"], j["url"], j["posted"], j["source"])
+    elif which == "linkedin":
+        for j in linkedin_alerts({}):
+            c = idx.get(norm_slug(j["company"])) or match_company(norm_slug(j["company"]), idx)
+            name, ctype = (c["name"], c["type"]) if c else (j["company"] or "Entreprise", "Autre")
+            yield raw(name, ctype, j["title"], j["location"], j["url"], j["posted"], j["source"])
+    else:
+        for j in jobteaser({}):
+            m = match_company(j["slug"], idx, prefix=True)
+            if m:
+                c, rest = m
+                title = rest.replace("-", " ").strip()
+                yield raw(c["name"], c["type"], title[:1].upper() + title[1:], title, j["url"], j["posted"], j["source"])
+
+
 # --------------------------------------------------------------------------- résolution des sources
 
 def load_resolved() -> dict:
@@ -158,7 +219,9 @@ def run_company(c: dict, defaults: dict, resolved: dict):
                 ok = True
             except Exception as e:  # noqa: BLE001
                 errors.append(f"{cfg['ats']}: {type(e).__name__}: {e}"[:200])
-        if ok and (rows or len(configs) == 1):
+        if ok and rows:
+            return rows, cfg["ats"], None
+        if ok and len(configs) == 1 and c.get("ats"):
             return rows, cfg["ats"], None
     # le connecteur explicite a échoué : on tente la détection depuis la page carrières
     if c.get("ats") and c.get("careers"):
@@ -173,7 +236,8 @@ def run_company(c: dict, defaults: dict, resolved: dict):
         except Exception as e:  # noqa: BLE001
             errors.append(f"détection: {type(e).__name__}: {e}"[:200])
     if not c.get("ats"):
-        resolved.pop(c["name"], None)  # la plateforme détectée ne répond plus : on la recherchera au prochain passage
+        # plateforme détectée vide ou en panne : on ne réessaie pas avant 7 jours
+        resolved[c["name"]] = {"at": NOW.isoformat(timespec="seconds"), "configs": [], "note": "aucune offre"}
     return [], configs[0]["ats"], " | ".join(errors) or "aucune offre"
 
 
@@ -259,6 +323,14 @@ def collect(check=False, only: set[str] | None = None):
     companies = [c for c in cfg.get("companies", []) if not only or any(o.lower() in c["name"].lower() for o in only)]
     resolved = load_resolved()
     tasks = [(c["name"], lambda c=c: run_company(c, defaults, resolved)) for c in companies]
+    for flag, label in (("welcome_to_the_jungle", "wttj"), ("jobteaser", "jobteaser"), ("linkedin_alerts", "linkedin")):
+        if cfg.get(flag) and not only:
+            def agg(label=label, comps=companies):
+                try:
+                    return list(src_aggregators(comps, label)), label, None
+                except Exception as e:  # noqa: BLE001
+                    return [], label, f"{type(e).__name__}: {e}"[:200]
+            tasks.append(({"wttj": "Welcome to the Jungle", "jobteaser": "Jobteaser", "linkedin": "LinkedIn (alertes email)"}[label], agg))
     if cfg.get("vie_businessfrance") and not only:
         def vie():
             try:
@@ -268,7 +340,7 @@ def collect(check=False, only: set[str] | None = None):
         tasks.append(("Business France (VIE)", vie))
 
     rows, status, failed = [], [], set()
-    with cf.ThreadPoolExecutor(max_workers=8) as ex:
+    with cf.ThreadPoolExecutor(max_workers=16) as ex:
         futures = {ex.submit(fn): name for name, fn in tasks}
         for fut in cf.as_completed(futures):
             name = futures[fut]

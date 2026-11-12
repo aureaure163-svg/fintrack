@@ -76,18 +76,18 @@ def slug_variants(name: str) -> list[str]:
 def probe(name: str) -> list[tuple[str, dict]]:
     """Essaie les identifiants probables sur les API publiques."""
     hits = []
-    for slug in slug_variants(name):
+    for slug in slug_variants(name)[:3]:
         tests = [
             ("greenhouse", {"token": slug}, f"https://boards-api.greenhouse.io/v1/boards/{slug}/jobs",
-             lambda d: isinstance(d, dict) and "jobs" in d),
+             lambda d: isinstance(d, dict) and len(d.get("jobs") or []) > 0),
             ("lever", {"token": slug}, f"https://api.lever.co/v0/postings/{slug}?mode=json&limit=1",
-             lambda d: isinstance(d, list)),
+             lambda d: isinstance(d, list) and len(d) > 0),
             ("ashby", {"token": slug}, f"https://api.ashbyhq.com/posting-api/job-board/{slug}",
-             lambda d: isinstance(d, dict) and "jobs" in d),
+             lambda d: isinstance(d, dict) and len(d.get("jobs") or []) > 0),
             ("smartrecruiters", {"token": slug}, f"https://api.smartrecruiters.com/v1/companies/{slug}/postings?limit=1",
              lambda d: isinstance(d, dict) and d.get("totalFound", 0) > 0),
             ("workable", {"token": slug}, f"https://apply.workable.com/api/v1/widget/accounts/{slug}",
-             lambda d: isinstance(d, dict) and "jobs" in d),
+             lambda d: isinstance(d, dict) and len(d.get("jobs") or []) > 0),
         ]
         for kind, cfg, url, ok in tests:
             try:

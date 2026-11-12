@@ -55,7 +55,7 @@ SUPPORT = "Middle / Back office"
 
 # L'ordre compte : la première règle qui matche gagne.
 SPECIALISATIONS: list[tuple[str, str, re.Pattern]] = [
-    ("M&A", FRONT, rx(r"\bm&a\b", r"\bm ?& ?a\b", r"mergers", r"fusions", r"acquisitions")),
+    ("M&A", FRONT, rx(r"\bm&a\b", r"\bm ?& ?a\b", r"(?<![a-z])m a(?![a-z])", r"\bm-a\b", r"mergers", r"fusions", r"acquisitions")),
     ("Private Equity & VC", FRONT, rx(r"private equity", r"buy-?out", r"growth equity", r"venture capital", r"\bvc\b",
                                        r"capital[- ]investissement", r"infrastructure invest")),
     ("Investment Banking", FRONT, rx(r"investment bank", r"\bibd\b", r"coverage", r"\becm\b", r"\bdcm\b", r"leveraged finance",
