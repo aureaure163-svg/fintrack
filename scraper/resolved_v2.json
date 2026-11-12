@@ -1,4 +1,8 @@
 {
+ "123 Investment Managers": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "17Capital": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
@@ -11,8 +15,16 @@
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "4GC": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "7IM": {
   "at": "2026-11-12T18:54:00+00:00",
+  "configs": []
+ },
+ "AAB": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "ABB": {
@@ -44,6 +56,10 @@
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "ACE & Company": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "ACT Commodities": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": [
@@ -53,6 +69,10 @@
    }
   ]
  },
+ "ACTIVE M&A Partners GmbH": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "ADM": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
@@ -61,8 +81,20 @@
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "ADNOC Group": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "AECOM": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "AEM Unternehmerkapital GmbH": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "AENU": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "AEQUITA": {
@@ -86,6 +118,10 @@
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "AHS": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "AIG": {
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
@@ -94,8 +130,24 @@
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "ALTIOS International": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "AMS Group": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "ANTIC": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "ANZ": {
   "at": "2026-11-12T18:54:00+00:00",
+  "configs": []
+ },
+ "AP Ventures": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "APG Asset Management": {
@@ -117,6 +169,10 @@
  },
  "AQUMON": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "ARAG": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "ARC CAPITAL": {
@@ -143,6 +199,10 @@
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "AUDUN Partners": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "AURELIUS": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
@@ -151,8 +211,24 @@
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "AVIAREPS India": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "AVIAREPS TURKEY": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "AXA": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "AXA IM": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "AXIAN Group": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "AXQ Capital": {
@@ -198,6 +274,14 @@
    }
   ]
  },
+ "Accriva Diagnostics": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Acer Finance": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Achmea": {
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
@@ -208,6 +292,10 @@
  },
  "Acton Capital": {
   "at": "2026-11-12T18:54:00+00:00",
+  "configs": []
+ },
+ "Ader Finance": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Aegon Asset Management": {
@@ -222,8 +310,16 @@
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "Aether": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Affinius Capital": {
   "at": "2026-11-12T18:54:00+00:00",
+  "configs": []
+ },
+ "Afianza": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Afinum Management GmbH": {
@@ -241,6 +337,10 @@
  },
  "Akereos Capital": {
   "at": "2026-11-12T18:54:00+00:00",
+  "configs": []
+ },
+ "Akimbo": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Aksia": {
@@ -262,6 +362,14 @@
  },
  "Aldermore Bank": {
   "at": "2026-11-12T18:54:00+00:00",
+  "configs": []
+ },
+ "Alexa Capital": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "All Interests Aligned": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "All Options": {
@@ -293,12 +401,32 @@
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "Alter Domus": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Aluna Partners": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "AlvaCapital": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Alvarez & Marsal": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "Amaltea Consultoría": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Amarenco": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Amethis": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Amprion GmbH": {
@@ -317,6 +445,23 @@
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "Anaxago": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Andercore": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": [
+   {
+    "ats": "ashby",
+    "token": "andercore"
+   }
+  ]
+ },
+ "Anesi Advisors": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Anthelion Capital": {
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
@@ -333,9 +478,26 @@
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "Aon": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Apax Partners": {
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
+ },
+ "Apera Asset Management": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Apex Group Ltd": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": [
+   {
+    "ats": "smartrecruiters",
+    "token": "apexgroupltd"
+   }
+  ]
  },
  "Apollo Global Management": {
   "at": "2026-11-12T18:54:00+00:00",
@@ -346,8 +508,21 @@
    }
   ]
  },
+ "Aptura": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": [
+   {
+    "ats": "ashby",
+    "token": "aptura"
+   }
+  ]
+ },
  "Aquilius Investment Partners": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "Arbor Capital Partners LLP": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Arbuthnot Latham": {
@@ -358,12 +533,24 @@
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "ArcelorMittal": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Arctic": {
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
  "Ares Management": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "Arganto": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Aria Partners": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Aries Global": {
@@ -374,6 +561,14 @@
     "token": "ariesglobal"
    }
   ]
+ },
+ "ArkTalents": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Arkea Capital": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
  },
  "Arkolia": {
   "at": "2026-11-12T18:54:00+00:00",
@@ -405,6 +600,18 @@
    }
   ]
  },
+ "Ashurst": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Ashurst Perkins Coie": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Asian Infrastructure Investment Bank (AIIB)": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Aspect Capital": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
@@ -413,8 +620,16 @@
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "AssetBay": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Astorg": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "Athora Belgium": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Ativa Investimentos": {
@@ -442,6 +657,10 @@
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "Aurora Energy Research": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Auros": {
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
@@ -459,6 +678,14 @@
    }
   ]
  },
+ "Avedon Capital Partners": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Avison Young": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Aviva Investors": {
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
@@ -475,12 +702,20 @@
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "Azets": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "B3": {
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
  "BAT": {
   "at": "2026-11-12T18:54:00+00:00",
+  "configs": []
+ },
+ "BATIBIG": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "BBH-Gruppe": {
@@ -497,6 +732,18 @@
  },
  "BID Equity": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "BIO - the Belgian Investment Company for Developing Countries": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "BIT Capital": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "BLCK CAP": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "BLOK Management": {
@@ -519,8 +766,16 @@
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "BOX4 Financial Markets": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "BRIGHT CAPITAL Investment Management GmbH": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "BTG": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "BTG Pactual": {
@@ -544,6 +799,10 @@
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "Babilou Family Nederland": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Bain & Company": {
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
@@ -552,8 +811,20 @@
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "Baker Tilly Belgium": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Ballast Nedam Development": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Balyasny Asset Management": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "Banca Akros": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Banca Ifis": {
@@ -600,6 +871,14 @@
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "Banco Sabadell": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Bank . Banque Van Breda": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Bank ABC": {
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
@@ -612,6 +891,10 @@
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "Banker's Lounge": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Banque Cantonale Vaudoise": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
@@ -620,16 +903,44 @@
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "Banque Hottinguer": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Banque Internationale à Luxembourg (BIL)": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "Banque Populaire Auvergne Rhone Alpes": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Banque Populaire Grand Ouest": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Banque Syz": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "Banque Transatlantique": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Banque de Luxembourg": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "Banque wormser frères": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Basler Kantonalbank": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Basswood Capital Management, LLC": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Batt & Associés": {
@@ -666,6 +977,24 @@
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "Believe": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": [
+   {
+    "ats": "smartrecruiters",
+    "token": "believe"
+   }
+  ]
+ },
+ "Believe Digital": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": [
+   {
+    "ats": "smartrecruiters",
+    "token": "believe"
+   }
+  ]
+ },
  "Bellwether": {
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
@@ -686,8 +1015,20 @@
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "Bergen Capital Management Ltd": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Bergman Clinics Germany": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Bienviyance": {
   "at": "2026-11-12T18:54:00+00:00",
+  "configs": []
+ },
+ "Biffa": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "BlackFin Capital Partners": {
@@ -711,8 +1052,20 @@
    }
   ]
  },
+ "Bloomberg": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Bloomco": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Blue Earth Capital AG": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "BlueBridge Asset Management": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "BlueOrchard Finance Ltd": {
@@ -731,6 +1084,14 @@
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "Bondholders": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Border To Coast Pensions Partnership": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Boston Consulting Group": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
@@ -741,6 +1102,23 @@
  },
  "Boussard & Gavaudan": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "Bouwinvest Real Estate Investors": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": [
+   {
+    "ats": "smartrecruiters",
+    "token": "bouwinvest"
+   }
+  ]
+ },
+ "Bouygues Construction": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Bpi France Digital": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Bpifrance": {
@@ -779,12 +1157,24 @@
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "British Business Bank": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "British International Investment": {
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
  "British Land": {
   "at": "2026-11-12T18:54:00+00:00",
+  "configs": []
+ },
+ "Brixa": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Brose Group": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Brown Brothers Harriman": {
@@ -808,8 +1198,21 @@
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "Bupa UK": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": [
+   {
+    "ats": "workable",
+    "token": "bupa"
+   }
+  ]
+ },
  "Burford Capital": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "Business Software Group (BSG)": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Bybit": {
@@ -825,8 +1228,24 @@
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "CACEIS": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "CAIRUS": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "CAPCELLENCE Mittelstandspartner GmbH": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "CAPMIRA - Multi Family Office": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "CAPVIA Corporate Finance": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "CAPZA": {
@@ -858,12 +1277,28 @@
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "CEA": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "CELSA GROUP": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "CEPRES": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
  "CF - Compagnie Fiduciaire": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "CF&S Advisors": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "CHANEL": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "CIC": {
@@ -900,8 +1335,20 @@
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "CNP Assurances": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "COIMA": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "COLAS": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "COLIFT Expert Network": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "CONREN TRAMWAY": {
@@ -917,6 +1364,14 @@
    }
   ]
  },
+ "CORE POWER": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "CORSICA SOLE": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "CPP Investments": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
@@ -925,8 +1380,20 @@
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "Cadence Growth Capital (CGC)": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Caisse d'Epargne": {
   "at": "2026-11-12T18:54:00+00:00",
+  "configs": []
+ },
+ "Caisse d'Epargne Loire Drome Ardeche": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Caisse d'Epargne Rhone Alpes": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Caixa Geral de Depósitos": {
@@ -945,6 +1412,10 @@
     "token": "caladan"
    }
   ]
+ },
+ "Calibrium": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
  },
  "Cambon Partners": {
   "at": "2026-11-12T18:26:17+00:00",
@@ -966,8 +1437,16 @@
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "Cap Vert": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "CapMan": {
   "at": "2026-11-12T18:54:00+00:00",
+  "configs": []
+ },
+ "Capelia": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Capital Dynamics": {
@@ -986,6 +1465,10 @@
     "token": "capital"
    }
   ]
+ },
+ "CapitexAI": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
  },
  "Caprae Capital Partners": {
   "at": "2026-11-12T18:54:00+00:00",
@@ -1015,6 +1498,10 @@
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "Carra": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Carter Wahlberg": {
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
@@ -1039,8 +1526,21 @@
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "Castle Trust Bank": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": [
+   {
+    "ats": "ashby",
+    "token": "castle"
+   }
+  ]
+ },
  "Castleton Commodities International": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "Catalyst Advisors": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Cathay Capital": {
@@ -1055,6 +1555,10 @@
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "CenterSquare Investment Management": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Chartwell": {
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
@@ -1067,6 +1571,10 @@
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "Cintra, a Ferrovial company": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Cinven": {
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
@@ -1077,6 +1585,10 @@
  },
  "Citizens Financial Group": {
   "at": "2026-11-12T18:54:00+00:00",
+  "configs": []
+ },
+ "City Investment Solutions": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Clairfield": {
@@ -1096,8 +1608,25 @@
    }
   ]
  },
+ "Clearwater - España": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "token": "clearwater"
+   }
+  ]
+ },
+ "Clikalia": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Clipperton": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "Cloud IB": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "ClubFunding": {
@@ -1113,12 +1642,36 @@
    }
   ]
  },
+ "CognixAI": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Coinhouse": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Colchester Global Investors": {
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
  "Collingwood": {
   "at": "2026-11-12T18:54:00+00:00",
+  "configs": []
+ },
+ "Colombo Advisory": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Colruyt Group": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Colt Data Centre Services": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Columbia Lake Partners": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Columbia Threadneedle Investments": {
@@ -1135,6 +1688,10 @@
  },
  "Commonwealth Bank of Australia": {
   "at": "2026-11-12T18:54:00+00:00",
+  "configs": []
+ },
+ "Compagnie des Alpes": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Concentro Management AG": {
@@ -1156,6 +1713,10 @@
  },
  "ConsusPartner": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "Cooper Parry": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Copenhagen Infrastructure Partners": {
@@ -1190,6 +1751,14 @@
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "Creadev": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Creand Wealth Management - España": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Credem": {
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
@@ -1206,12 +1775,20 @@
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "Crezca Group": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Crossgate": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
  "Crowe BPG GmbH": {
   "at": "2026-11-12T18:54:00+00:00",
+  "configs": []
+ },
+ "Crowe UK": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Crown Agents Bank": {
@@ -1222,6 +1799,14 @@
     "token": "crownagentsbank"
    }
   ]
+ },
+ "Crown Fund": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Crown Fund S.C.A. SICAV-RAIF": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
  },
  "Crédit Agricole": {
   "at": "2026-11-12T18:26:17+00:00",
@@ -1237,6 +1822,10 @@
  },
  "Crédit Mutuel": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "Crédit Mutuel Impact": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "D.E. Shaw": {
@@ -1607,6 +2196,14 @@
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "FCM Frederic Capital Management": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "FCP": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "FDJ UNITED": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
@@ -1619,6 +2216,10 @@
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "FMO - Dutch entrepreneurial development bank": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "FOL Management": {
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
@@ -1626,6 +2227,15 @@
  "FORUM Family Office": {
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
+ },
+ "FRP Advisory": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": [
+   {
+    "ats": "smartrecruiters",
+    "token": "frpadvisory"
+   }
+  ]
  },
  "FSN Capital": {
   "at": "2026-11-12T18:26:17+00:00",
@@ -1651,12 +2261,24 @@
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "Federated Hermes Limited": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Fenchurch Advisory": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Fidelio Capital": {
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
  "Fidelity International": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "Fidelity Investments": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Finance in Motion": {
@@ -1671,12 +2293,24 @@
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "Fireclay Partners": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "First Abu Dhabi Bank (FAB)": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "First Citizens Bank": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "First Momentum Ventures": {
   "at": "2026-11-12T18:54:00+00:00",
+  "configs": []
+ },
+ "Fisher Investments": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Five Rings": {
@@ -1690,6 +2324,19 @@
  "Flossbach von Storch": {
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
+ },
+ "Flowdesk": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "token": "flowdesk"
+   },
+   {
+    "ats": "smartrecruiters",
+    "token": "flowdesk"
+   }
+  ]
  },
  "Fluent Software": {
   "at": "2026-11-12T18:54:00+00:00",
@@ -1716,6 +2363,23 @@
    }
   ]
  },
+ "Freddie Mac": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Freestone Capital Management": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "token": "freestonecapitalmanagement"
+   }
+  ]
+ },
+ "FrenchFood Capital": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Future Planet Capital": {
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
@@ -1728,6 +2392,10 @@
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "G2 Capital Advisors": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "GBL": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
@@ -1736,12 +2404,29 @@
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "GLC Advisors & Co.": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "token": "glcadvisors"
+   }
+  ]
+ },
  "GO & Company": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
  "GP Bullhound": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "GREENPEAK Partners": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "GTS": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "GTT": {
@@ -1753,6 +2438,27 @@
    }
   ]
  },
+ "Galapagos Capital": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Galaxy": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "token": "galaxy"
+   }
+  ]
+ },
+ "Garanti BBVA": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Garda Capital Partners": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Generali": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
@@ -1761,20 +2467,60 @@
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "Genial Investimentos": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Gilde Healthcare": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Glencore": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "Global Gate": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Golding Capital Partners GmbH": {
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "Golub Capital": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Goodbody": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Graham Partners": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Grant Thornton": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "Grasshopper": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Great Eastern": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Greenyellow": {
   "at": "2026-11-12T18:54:00+00:00",
+  "configs": []
+ },
+ "Greystone": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Group One Trading": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Groupe BPCE": {
@@ -1797,8 +2543,38 @@
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "H.I.G. Capital": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "HBK Capital Management": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "token": "hbkcapitalmanagement"
+   }
+  ]
+ },
+ "HDI Group": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "HOOPP": {
   "at": "2026-11-12T18:54:00+00:00",
+  "configs": []
+ },
+ "HPS Investment Partners": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "token": "hpsinvestmentpartners"
+   }
+  ]
+ },
+ "HQ Capital": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "HQ Trust GmbH": {
@@ -1809,16 +2585,40 @@
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "Hamburg Commercial Bank": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Hamilton Lane": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "Handelsbanken": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Haniel": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Hannover Finanz": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "Harrison Street": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Hasso Plattner Foundation": {
   "at": "2026-11-12T18:54:00+00:00",
+  "configs": []
+ },
+ "Hawksmoor Investment Management": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Hayfin Capital Management": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Headlands Technologies": {
@@ -1833,6 +2633,10 @@
     "token": "heitman"
    }
   ]
+ },
+ "Helbling Business Advisors": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
  },
  "Herter & Co": {
   "at": "2026-11-12T18:54:00+00:00",
@@ -1859,6 +2663,10 @@
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "Howden": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Huatai International": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
@@ -1880,6 +2688,10 @@
    }
   ]
  },
+ "ICBC Standard Bank Plc": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "ICE": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
@@ -1890,6 +2702,10 @@
  },
  "IK Partners": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "IKB Deutsche Industriebank AG": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "IMAP": {
@@ -1918,6 +2734,10 @@
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "INCO Group": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "INDEFI": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
@@ -1934,12 +2754,20 @@
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "ITE Management": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "IVO Capital Partners": {
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
  "In Extenso": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "In-Q-Tel": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "InfiniteQuant": {
@@ -1953,6 +2781,10 @@
  },
  "Inflexion Points Technology": {
   "at": "2026-11-12T18:54:00+00:00",
+  "configs": []
+ },
+ "InfraRed Capital Partners": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "InfraVia": {
@@ -1989,6 +2821,10 @@
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "Invest-NL": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Investa Real Estate": {
   "at": "2026-11-12T18:54:00+00:00",
   "configs": [
@@ -2002,9 +2838,35 @@
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "Invision AG": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Itaú Unibanco": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": [
+   {
+    "ats": "smartrecruiters",
+    "token": "itauunibanco"
+   }
+  ]
+ },
+ "JCAP": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "JEGI LEONIS": {
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
+ },
+ "JMI Equity": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": [
+   {
+    "ats": "lever",
+    "token": "jmi"
+   }
+  ]
  },
  "Jain Global": {
   "at": "2026-11-12T18:26:17+00:00",
@@ -2031,12 +2893,25 @@
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "K1 Investment Management": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": [
+   {
+    "ats": "ashby",
+    "token": "k1"
+   }
+  ]
+ },
  "K3 Advisory Group": {
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "KBC Bank & Verzekering": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "KKR": {
-  "at": "2026-11-12T18:54:00+00:00",
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": [
    {
     "ats": "greenhouse",
@@ -2053,6 +2928,10 @@
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "Kappa Lab": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Kepler Cheuvreux": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": [
@@ -2061,6 +2940,10 @@
     "token": "kepler"
    }
   ]
+ },
+ "Kershner Trading Group": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
  },
  "Keyrus": {
   "at": "2026-11-12T18:54:00+00:00",
@@ -2073,6 +2956,10 @@
  },
  "KfW": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "Kline Hill Partners": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Knight Frank": {
@@ -2100,6 +2987,10 @@
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "LGT Capital Partners": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "LH Mittelstandsnachfolge": {
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
@@ -2108,12 +2999,29 @@
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "LPPI": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "LV Collective": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "token": "lv"
+   }
+  ]
+ },
  "La Banque Postale": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
  "La Caisse": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "LaSalle": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Landesbank Hessen-Thüringen": {
@@ -2127,6 +3035,19 @@
  "Lazard Frères Gestion": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
+ },
+ "Leerink Partners": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Legal & General": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": [
+   {
+    "ats": "smartrecruiters",
+    "token": "legalandgeneral"
+   }
+  ]
  },
  "Lesaffre": {
   "at": "2026-11-12T18:26:17+00:00",
@@ -2158,12 +3079,48 @@
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "Longspur Capital": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Loomis Sayles": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Loop Capital": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Lord Abbett": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Los Angeles Capital Management": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Lux Point Partners": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Luxempart": {
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "Lynx Asset Management": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "M&G": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "M&T Bank": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "M7 Real Estate": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "MAN Group": {
@@ -2177,6 +3134,10 @@
  },
  "MARGO": {
   "at": "2026-11-12T18:54:00+00:00",
+  "configs": []
+ },
+ "MCF Corporate Finance": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "MEAG": {
@@ -2199,8 +3160,16 @@
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "MP Corporate Finance": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "MRL Advisors": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "MTS Health Partners": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "MYNE": {
@@ -2219,6 +3188,10 @@
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "Main Capital Partners": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Mako": {
   "at": "2026-11-12T18:54:00+00:00",
   "configs": [
@@ -2228,8 +3201,20 @@
    }
   ]
  },
+ "Mapletree": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Marathon Capital": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Marex": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "MarketAxess": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Marktlink": {
@@ -2238,6 +3223,10 @@
  },
  "Marsh McLennan": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "MarshBerry": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Mathrix": {
@@ -2260,16 +3249,54 @@
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "Meridiam": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Mesirow": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "MetLife Investment Management": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": [
+   {
+    "ats": "lever",
+    "token": "metlife"
+   }
+  ]
+ },
  "Metabit Trading": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
+ },
+ "Metro Bank (UK)": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "token": "metro"
+   }
+  ]
  },
  "Metzler": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "Milaris Partners": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Millennium": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "Mint Tower Capital": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Mirabaud": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Mirova": {
@@ -2278,6 +3305,14 @@
  },
  "Moneta AM": {
   "at": "2026-11-12T18:54:00+00:00",
+  "configs": []
+ },
+ "Moneyfarm": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Monte Bravo": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Moody's": {
@@ -2293,8 +3328,16 @@
    }
   ]
  },
+ "Mubadala Investment Company": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Munich Re": {
   "at": "2026-11-12T18:54:00+00:00",
+  "configs": []
+ },
+ "Musket": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Mutares": {
@@ -2319,6 +3362,19 @@
    }
   ]
  },
+ "NIBC": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "NK Securities Research": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "token": "nksecuritiesresearch"
+   }
+  ]
+ },
  "NORD Holding": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
@@ -2336,6 +3392,10 @@
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "NatWest Group": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "National Bank of Canada": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": [
@@ -2345,8 +3405,21 @@
    }
   ]
  },
+ "National Wealth Fund": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "token": "national"
+   }
+  ]
+ },
  "Natixis": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "Navy Federal Credit Union": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Naxicap Partners": {
@@ -2369,6 +3442,14 @@
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "Nhood Services France": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Ninety One": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Nomura": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
@@ -2383,6 +3464,10 @@
  },
  "Nordic Capital": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "Norges Bank Investment Management": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Northern Trust": {
@@ -2415,9 +3500,22 @@
    }
   ]
  },
+ "Nuveen": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Nykredit": {
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
+ },
+ "OakNorth": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": [
+   {
+    "ats": "ashby",
+    "token": "oaknorth"
+   }
+  ]
  },
  "Oaklins": {
   "at": "2026-11-12T18:26:17+00:00",
@@ -2425,6 +3523,10 @@
  },
  "Octopus Energy": {
   "at": "2026-11-12T18:54:00+00:00",
+  "configs": []
+ },
+ "Octopus Investments": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Octus": {
@@ -2465,12 +3567,46 @@
    }
   ]
  },
+ "Oppenheimer & Co. Inc.": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Opportunity": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Optiver": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
  "Orbis": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "Orchard Global": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "token": "orchard"
+   },
+   {
+    "ats": "ashby",
+    "token": "orchard"
+   }
+  ]
+ },
+ "Order Capital": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": [
+   {
+    "ats": "smartrecruiters",
+    "token": "order"
+   }
+  ]
+ },
+ "Orion Services Group": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Orlando Capital": {
@@ -2490,12 +3626,28 @@
    }
   ]
  },
+ "P3 Logistic Parks": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "PAI Partners": {
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "PATRIZIA": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "PAX Corporate Finance": {
   "at": "2026-11-12T18:54:00+00:00",
+  "configs": []
+ },
+ "PEAK6": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "PGGM": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "PGIM": {
@@ -2511,8 +3663,41 @@
    }
   ]
  },
+ "PKF Smith Cooper": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "PMCF": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "PREMIUM Equity Partners": {
   "at": "2026-11-12T18:54:00+00:00",
+  "configs": []
+ },
+ "PSRS/PEERS of Missouri": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "PanAgora Asset Management": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Panmure Liberum": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Pantheon": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "token": "pantheon"
+   }
+  ]
+ },
+ "Paragon Partners": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Parallel Invest": {
@@ -2544,6 +3729,23 @@
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "Pathstone": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "token": "pathstone"
+   }
+  ]
+ },
+ "Pathway Capital Management": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Patria Investments": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Pava Partners": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
@@ -2552,12 +3754,37 @@
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "Pemberton Asset Management": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": [
+   {
+    "ats": "ashby",
+    "token": "pemberton"
+   }
+  ]
+ },
  "Perella Weinberg Partners": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "Performance Trust Capital Partners": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Permira": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Petroineos": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "Pictet": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Pine Valley Capital GmbH": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Pinely": {
@@ -2577,8 +3804,16 @@
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "Polen Capital": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Polymer Capital": {
   "at": "2026-11-12T18:54:00+00:00",
+  "configs": []
+ },
+ "Porto": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Praemia Reim": {
@@ -2598,12 +3833,28 @@
    }
   ]
  },
+ "Prelios": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Pretium": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "PricewaterhouseCoopers GmbH WPG": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
  "Pride Capital Partners": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "Prime Capital AG": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Principal Financial Group": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Private Assets": {
@@ -2620,6 +3871,10 @@
  },
  "QCP": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "Qatalyst Partners": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Qida": {
@@ -2639,6 +3894,10 @@
    }
   ]
  },
+ "Quantedge Capital": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Queueco": {
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
@@ -2652,12 +3911,24 @@
    }
   ]
  },
+ "Quilvest Capital Partners": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Quintet Private Bank": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "RBC": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
  "RBS": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "RDV Corporation": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "REIA Capital": {
@@ -2706,6 +3977,10 @@
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "Rathbones": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Rautenberg & Company": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
@@ -2732,12 +4007,29 @@
    }
   ]
  },
+ "Readystate": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "token": "readystate"
+   }
+  ]
+ },
  "Realyze Ventures": {
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
  "Rembrandt M&A": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "Renaissance Technologies": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "RenaissanceRe": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Renta 4": {
@@ -2757,12 +4049,29 @@
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "Ripple": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "token": "ripple"
+   }
+  ]
+ },
  "Rivean Capital": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "Riverside": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Rochefort & Associes": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "Rockefeller Capital Management": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Rocket Internet": {
@@ -2780,6 +4089,10 @@
  },
  "Roots Advisory": {
   "at": "2026-11-12T18:54:00+00:00",
+  "configs": []
+ },
+ "Rothesay": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Royal London": {
@@ -2806,6 +4119,15 @@
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "SESCO": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "token": "sesco"
+   }
+  ]
+ },
  "SGP Schneider Geiwitz": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
@@ -2830,8 +4152,16 @@
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "SOLIC Capital Advisors": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "SPIE Operations": {
   "at": "2026-11-12T18:54:00+00:00",
+  "configs": []
+ },
+ "SQS Trading": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "STATION F": {
@@ -2875,6 +4205,10 @@
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "Savoia Investments": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Saxenhammer": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
@@ -2896,6 +4230,10 @@
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "Scope Ratings": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Scotiabank": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": [
@@ -2909,6 +4247,14 @@
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "Serafin Unternehmensgruppe": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Shea & Company": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Sienna Investment Managers": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": [
@@ -2918,9 +4264,26 @@
    }
   ]
  },
+ "Silvertide": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Simon Capital": {
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
+ },
+ "Slate Asset Management": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": [
+   {
+    "ats": "lever",
+    "token": "slate"
+   },
+   {
+    "ats": "ashby",
+    "token": "slate"
+   }
+  ]
  },
  "SmartestEnergy": {
   "at": "2026-11-12T18:26:17+00:00",
@@ -2934,17 +4297,75 @@
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "Solis Investimentos": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Solomon Partners": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Sorgenia": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Soros Fund Management": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Sparkasse": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Squarefield": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
+ },
+ "St. James's Place": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Standard Bank Group": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": [
+   {
+    "ats": "smartrecruiters",
+    "token": "standardbankgroup"
+   }
+  ]
  },
  "Standard Chartered": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": [],
   "note": "aucune offre"
  },
+ "Star Mountain Capital": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "token": "starmountaincapital"
+   }
+  ]
+ },
+ "Starwood Capital Group": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "State Street": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Statkraft": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "Steinbeis M&A Partners GmbH": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Stellex Capital Management": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Stephens": {
@@ -2962,6 +4383,14 @@
  },
  "StoneX Group Inc.": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "Stout": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Strategic Investment Group": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Suez": {
@@ -3009,6 +4438,10 @@
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "Systematica Investments": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Systemiq Capital": {
   "at": "2026-11-12T18:54:00+00:00",
   "configs": [
@@ -3024,6 +4457,10 @@
  },
  "T2Y Capital": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "TCW": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "TD Bank": {
@@ -3042,6 +4479,10 @@
     "token": "tpicap"
    }
   ]
+ },
+ "TPG": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
  },
  "TREYSTA Ingenieure Holding GmbH": {
   "at": "2026-11-12T18:54:00+00:00",
@@ -3071,6 +4512,10 @@
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "Tenzing": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Tessera": {
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
@@ -3083,8 +4528,25 @@
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "Texas Capital": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "The McLean Group": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": [
+   {
+    "ats": "workable",
+    "token": "the-mclean-group"
+   }
+  ]
+ },
  "The Social Hub (B Corp™)": {
   "at": "2026-11-12T18:54:00+00:00",
+  "configs": []
+ },
+ "Thoma Bravo": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Tikehau Capital": {
@@ -3100,16 +4562,49 @@
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "Tower Peak Partners": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Tradeweb": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Traspaso Dental": {
   "at": "2026-11-12T18:54:00+00:00",
+  "configs": []
+ },
+ "Trexquant": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Trill Impact": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "Trillium Trading": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "token": "trillium"
+   }
+  ]
+ },
+ "Triodos Bank": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Trium & Co": {
   "at": "2026-11-12T18:54:00+00:00",
+  "configs": []
+ },
+ "Truist": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Two Sigma": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "UBP - Union Bancaire Privée": {
@@ -3123,6 +4618,15 @@
  "UCEA - Family Office Group": {
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
+ },
+ "UVIMCO": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "token": "uvimco"
+   }
+  ]
  },
  "Ufenau Capital Partners": {
   "at": "2026-11-12T18:26:17+00:00",
@@ -3139,6 +4643,14 @@
  },
  "Union Investment": {
   "at": "2026-11-12T18:54:00+00:00",
+  "configs": []
+ },
+ "Union Square Advisors": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Unipol Assicurazioni": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "United Overseas Bank": {
@@ -3166,12 +4678,20 @@
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "Value Capital Advisors": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Van Lanschot Kempen": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
  "VentureLink": {
   "at": "2026-11-12T18:54:00+00:00",
+  "configs": []
+ },
+ "Verdane": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Verition": {
@@ -3186,6 +4706,41 @@
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "Vinci Compass": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": [
+   {
+    "ats": "ashby",
+    "token": "vinci"
+   }
+  ]
+ },
+ "Vista Equity Partners": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Vitol": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": [
+   {
+    "ats": "smartrecruiters",
+    "token": "vitol"
+   }
+  ]
+ },
+ "VivCourt": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "token": "vivcourt"
+   },
+   {
+    "ats": "smartrecruiters",
+    "token": "vivcourt"
+   }
+  ]
+ },
  "Vogel Beratung": {
   "at": "2026-11-12T18:54:00+00:00",
   "configs": [
@@ -3195,8 +4750,16 @@
    }
   ]
  },
+ "Volaris": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Volcore": {
   "at": "2026-11-12T18:54:00+00:00",
+  "configs": []
+ },
+ "Voloridge": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "WAYES": {
@@ -3211,6 +4774,15 @@
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "Waterfall Asset Management": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": [
+   {
+    "ats": "lever",
+    "token": "waterfall"
+   }
+  ]
+ },
  "Waterfront International": {
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
@@ -3219,8 +4791,24 @@
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "Weatherbys Private Bank": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Wedbush Securities": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Wells Fargo": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Welltower": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "Westpac": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "William Blair": {
@@ -3232,6 +4820,10 @@
    }
   ]
  },
+ "Wilmington Trust": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Wintergerst": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
@@ -3240,24 +4832,56 @@
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "Wolverine Trading": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Woozle Research": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Worldline": {
   "at": "2026-11-12T18:54:00+00:00",
+  "configs": []
+ },
+ "XY Capital": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Y-Intercept": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "YFM Equity Partners": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "Zelestra": {
   "at": "2026-11-12T18:54:00+00:00",
+  "configs": []
+ },
+ "Ziegler": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Zurich Insurance": {
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "Zürcher Kantonalbank": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "aaff": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "arKap & Co": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "arqus partners": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "bachert&partner": {
@@ -3270,6 +4894,10 @@
  },
  "capiton AG": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "cosnova": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "i-capital": {
@@ -3301,12 +4929,20 @@
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "myVesta": {
+  "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
  "neomerge": {
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
  "ox8 Corporate Finance": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "redalpine": {
+  "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "tectrex": {
