@@ -35,12 +35,19 @@ class Http:
         last = None
         for attempt in range(3):
             try:
-                r = self.s.request(method, url, timeout=30, **kw)
+                r = self.s.request(method, url, timeout=20, **kw)
                 if r.status_code in (429, 503):
                     time.sleep(4 * (attempt + 1))
                     continue
+                if 400 <= r.status_code < 500:  # introuvable / refusé : inutile de réessayer
+                    r.raise_for_status()
                 r.raise_for_status()
                 return r.json() if as_json else r.text
+            except requests.HTTPError as e:
+                if e.response is not None and 400 <= e.response.status_code < 500:
+                    raise
+                last = e
+                time.sleep(1.5 * (attempt + 1))
             except (requests.RequestException, ValueError) as e:
                 last = e
                 time.sleep(1.5 * (attempt + 1))

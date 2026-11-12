@@ -42,6 +42,15 @@ CONFIG = Path(__file__).parent / "sources.yaml"
 RESOLVED = Path(__file__).parent / "resolved_v2.json"  # v2 : ignore les détections erronées du premier passage
 NOW = datetime.now(timezone.utc)
 REDISCOVER_AFTER = timedelta(days=7)
+TIME_BUDGET = timedelta(minutes=80)   # au-delà, les entreprises restantes sont reportées au passage suivant
+MAX_DISCOVER = 350                   # détections de plateforme maximum par passage
+_START = time.monotonic()
+_discovered = [0]
+_lock = __import__("threading").Lock()
+
+
+def out_of_time() -> bool:
+    return time.monotonic() - _START > TIME_BUDGET.total_seconds()
 
 log = logging.getLogger("fintrack")
 
@@ -182,6 +191,10 @@ def resolve(c: dict, resolved: dict) -> list[dict]:
     fresh = r and datetime.fromisoformat(r["at"]) > NOW - REDISCOVER_AFTER
     if r and (r.get("configs") or fresh):
         return [{**c, **cfg} for cfg in r.get("configs", [])]
+    with _lock:
+        if _discovered[0] >= MAX_DISCOVER:
+            raise TimeoutError("détection reportée au prochain passage")
+        _discovered[0] += 1
     found = discover(c["name"], c.get("careers"))
     resolved[c["name"]] = {"at": NOW.isoformat(timespec="seconds"),
                            "configs": [{"ats": k, **cfg} for k, cfg in found[:3]]}
@@ -199,9 +212,13 @@ def run_company(c: dict, defaults: dict, resolved: dict):
     """Collecte une entreprise. Renvoie (offres brutes, méthode utilisée, erreur)."""
     if c.get("skip"):
         return [], "ignorée", c["skip"]
+    if out_of_time():
+        return [], "reportée", "temps écoulé : reportée au prochain passage"
     errors = []
     try:
         configs = resolve(c, resolved)
+    except TimeoutError as e:
+        return [], "reportée", str(e)
     except Exception as e:  # noqa: BLE001
         return [], "détection", f"{type(e).__name__}: {e}"[:200]
     if not configs:
