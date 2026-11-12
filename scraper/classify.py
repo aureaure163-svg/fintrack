@@ -118,11 +118,14 @@ def classify_specialisation(title: str, extra: str = "") -> tuple[str, str] | No
 REGIONS = {
     "Europe": ["France", "Royaume-Uni", "Allemagne", "Suisse", "Luxembourg", "Belgique", "Pays-Bas", "Irlande", "Italie",
                "Espagne", "Portugal", "Pologne", "Danemark", "Suède", "Norvège", "Finlande", "Autriche", "République tchèque",
-               "Hongrie", "Grèce", "Roumanie", "Monaco"],
-    "Amérique du Nord": ["États-Unis", "Canada"],
-    "Amérique latine": ["Brésil", "Mexique", "Chili", "Colombie", "Argentine", "Pérou"],
+               "Hongrie", "Grèce", "Roumanie", "Monaco", "Slovaquie", "Bulgarie", "Chypre", "Malte", "Jersey", "Guernesey",
+               "Estonie", "Lettonie", "Lituanie", "Croatie", "Slovénie", "Serbie", "Islande", "Ukraine"],
+    "Amérique du Nord": ["États-Unis", "Canada", "Bermudes", "Îles Caïmans"],
+    "Amérique latine": ["Brésil", "Mexique", "Chili", "Colombie", "Argentine", "Pérou", "Uruguay", "Panama",
+                        "Costa Rica"],
     "Asie-Pacifique": ["Hong Kong", "Singapour", "Japon", "Chine", "Inde", "Australie", "Corée du Sud", "Taïwan",
-                       "Indonésie", "Malaisie", "Thaïlande", "Vietnam", "Philippines", "Nouvelle-Zélande"],
+                       "Indonésie", "Malaisie", "Thaïlande", "Vietnam", "Philippines", "Nouvelle-Zélande", "Sri Lanka", "Pakistan",
+                       "Bangladesh", "Kazakhstan"],
     "Moyen-Orient & Afrique": ["Émirats arabes unis", "Arabie saoudite", "Qatar", "Israël", "Afrique du Sud", "Maroc",
                                "Égypte", "Nigeria", "Kenya", "Turquie", "Bahreïn", "Koweït", "Côte d'Ivoire", "Sénégal"],
 }
@@ -153,7 +156,36 @@ COUNTRY_ALIASES = {
     "morocco": "Maroc", "maroc": "Maroc", "egypt": "Égypte", "nigeria": "Nigeria", "kenya": "Kenya",
     "turkey": "Turquie", "turkiye": "Turquie", "bahrain": "Bahreïn", "kuwait": "Koweït",
     "cote d'ivoire": "Côte d'Ivoire", "ivory coast": "Côte d'Ivoire", "senegal": "Sénégal",
+    "slovakia": "Slovaquie", "bulgaria": "Bulgarie", "cyprus": "Chypre", "malta": "Malte", "jersey": "Jersey",
+    "guernsey": "Guernesey", "estonia": "Estonie", "latvia": "Lettonie", "lithuania": "Lituanie", "croatia": "Croatie",
+    "slovenia": "Slovénie", "serbia": "Serbie", "iceland": "Islande", "ukraine": "Ukraine", "sri lanka": "Sri Lanka",
+    "pakistan": "Pakistan", "bangladesh": "Bangladesh", "kazakhstan": "Kazakhstan", "bermuda": "Bermudes",
+    "cayman islands": "Îles Caïmans", "uruguay": "Uruguay", "panama": "Panama", "costa rica": "Costa Rica",
+    "deutschland": "Allemagne", "nederland": "Pays-Bas", "espana": "Espagne", "italia": "Italie", "osterreich": "Autriche",
+    "belgie": "Belgique", "polska": "Pologne", "schweiz": "Suisse", "brasil": "Brésil",
 }
+
+ISO2 = {"FR": "France", "GB": "Royaume-Uni", "UK": "Royaume-Uni", "DE": "Allemagne", "CH": "Suisse", "LU": "Luxembourg",
+        "BE": "Belgique", "NL": "Pays-Bas", "IE": "Irlande", "IT": "Italie", "ES": "Espagne", "PT": "Portugal",
+        "PL": "Pologne", "DK": "Danemark", "SE": "Suède", "NO": "Norvège", "FI": "Finlande", "AT": "Autriche",
+        "CZ": "République tchèque", "HU": "Hongrie", "GR": "Grèce", "RO": "Roumanie", "SK": "Slovaquie", "BG": "Bulgarie",
+        "CY": "Chypre", "MT": "Malte", "US": "États-Unis", "CA": "Canada", "BR": "Brésil", "MX": "Mexique", "CL": "Chili",
+        "CO": "Colombie", "AR": "Argentine", "PE": "Pérou", "HK": "Hong Kong", "SG": "Singapour", "JP": "Japon",
+        "CN": "Chine", "IN": "Inde", "AU": "Australie", "KR": "Corée du Sud", "TW": "Taïwan", "ID": "Indonésie",
+        "MY": "Malaisie", "TH": "Thaïlande", "VN": "Vietnam", "PH": "Philippines", "NZ": "Nouvelle-Zélande",
+        "AE": "Émirats arabes unis", "SA": "Arabie saoudite", "QA": "Qatar", "IL": "Israël", "ZA": "Afrique du Sud",
+        "MA": "Maroc", "EG": "Égypte", "NG": "Nigeria", "KE": "Kenya", "TR": "Turquie", "BH": "Bahreïn", "LK": "Sri Lanka"}
+ISO3 = {"FRA": "France", "GBR": "Royaume-Uni", "DEU": "Allemagne", "CHE": "Suisse", "LUX": "Luxembourg", "BEL": "Belgique",
+        "NLD": "Pays-Bas", "IRL": "Irlande", "ITA": "Italie", "ESP": "Espagne", "PRT": "Portugal", "POL": "Pologne",
+        "USA": "États-Unis", "CAN": "Canada", "BRA": "Brésil", "MEX": "Mexique", "HKG": "Hong Kong", "SGP": "Singapour",
+        "JPN": "Japon", "CHN": "Chine", "IND": "Inde", "AUS": "Australie", "PHL": "Philippines", "MYS": "Malaisie",
+        "ARE": "Émirats arabes unis", "ZAF": "Afrique du Sud", "CZE": "République tchèque", "HUN": "Hongrie",
+        "ROU": "Roumanie", "SVK": "Slovaquie", "BGR": "Bulgarie", "AUT": "Autriche", "SWE": "Suède", "DNK": "Danemark",
+        "NOR": "Norvège", "FIN": "Finlande", "KOR": "Corée du Sud", "TWN": "Taïwan", "IDN": "Indonésie", "THA": "Thaïlande",
+        "ARG": "Argentine", "CHL": "Chili", "COL": "Colombie", "PER": "Pérou", "LKA": "Sri Lanka", "CRI": "Costa Rica"}
+US_STATES = {"AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY",
+             "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH",
+             "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY", "PR"}
 
 # alias ville -> (ville affichée, pays)
 CITIES = {
@@ -204,6 +236,38 @@ CITIES = {
     "casablanca": ("Casablanca", "Maroc"), "cairo": ("Le Caire", "Égypte"), "lagos": ("Lagos", "Nigeria"),
     "nairobi": ("Nairobi", "Kenya"), "istanbul": ("Istanbul", "Turquie"), "manama": ("Manama", "Bahreïn"),
     "abidjan": ("Abidjan", "Côte d'Ivoire"), "dakar": ("Dakar", "Sénégal"),
+    "neuilly": ("Neuilly-sur-Seine", "France"), "puteaux": ("Puteaux", "France"), "courbevoie": ("Courbevoie", "France"),
+    "marcq-en-barœul": ("Marcq-en-Barœul", "France"), "marcq en baroeul": ("Marcq-en-Barœul", "France"),
+    "boulogne-billancourt": ("Boulogne-Billancourt", "France"), "montrouge": ("Montrouge", "France"),
+    "saint-denis": ("Saint-Denis", "France"), "nanterre": ("Nanterre", "France"), "levallois": ("Levallois-Perret", "France"),
+    "strasbourg": ("Strasbourg", "France"), "rennes": ("Rennes", "France"), "montpellier": ("Montpellier", "France"),
+    "canary wharf": ("Londres", "Royaume-Uni"), "nottingham": ("Nottingham", "Royaume-Uni"), "leeds": ("Leeds", "Royaume-Uni"),
+    "birmingham": ("Birmingham", "Royaume-Uni"), "bristol": ("Bristol", "Royaume-Uni"), "belfast": ("Belfast", "Royaume-Uni"),
+    "cardiff": ("Cardiff", "Royaume-Uni"), "saint helier": ("Saint-Hélier", "Jersey"), "st helier": ("Saint-Hélier", "Jersey"),
+    "diegem": ("Diegem", "Belgique"), "antwerp": ("Anvers", "Belgique"), "wien": ("Vienne", "Autriche"),
+    "bratislava": ("Bratislava", "Slovaquie"), "nicosia": ("Nicosie", "Chypre"), "limassol": ("Limassol", "Chypre"),
+    "sofia": ("Sofia", "Bulgarie"), "gdynia": ("Gdynia", "Pologne"), "gdansk": ("Gdansk", "Pologne"), "lodz": ("Lodz", "Pologne"),
+    "boadilla": ("Madrid", "Espagne"), "valletta": ("La Valette", "Malte"), "tallinn": ("Tallinn", "Estonie"),
+    "vilnius": ("Vilnius", "Lituanie"), "riga": ("Riga", "Lettonie"), "zagreb": ("Zagreb", "Croatie"),
+    "frankfurt am main": ("Francfort", "Allemagne"), "stuttgart": ("Stuttgart", "Allemagne"), "eschborn": ("Eschborn", "Allemagne"),
+    "baltimore": ("Baltimore", "États-Unis"), "cincinnati": ("Cincinnati", "États-Unis"), "pittsburgh": ("Pittsburgh", "États-Unis"),
+    "minneapolis": ("Minneapolis", "États-Unis"), "mclean": ("McLean", "États-Unis"), "milwaukee": ("Milwaukee", "États-Unis"),
+    "cleveland": ("Cleveland", "États-Unis"), "richmond": ("Richmond", "États-Unis"), "detroit": ("Detroit", "États-Unis"),
+    "owings mills": ("Owings Mills", "États-Unis"), "phoenix": ("Phoenix", "États-Unis"), "san diego": ("San Diego", "États-Unis"),
+    "salt lake city": ("Salt Lake City", "États-Unis"), "columbus": ("Columbus", "États-Unis"), "st. louis": ("Saint-Louis", "États-Unis"),
+    "nashville": ("Nashville", "États-Unis"), "tampa": ("Tampa", "États-Unis"), "jacksonville": ("Jacksonville", "États-Unis"),
+    "wilmington": ("Wilmington", "États-Unis"), "princeton": ("Princeton", "États-Unis"), "newark": ("Newark", "États-Unis"),
+    "palo alto": ("Palo Alto", "États-Unis"), "menlo park": ("Menlo Park", "États-Unis"), "west palm": ("West Palm Beach", "États-Unis"),
+    "new delhi": ("New Delhi", "Inde"), "delhi": ("New Delhi", "Inde"), "noida": ("Noida", "Inde"), "kolkata": ("Kolkata", "Inde"),
+    "kochi": ("Kochi", "Inde"), "ahmedabad": ("Ahmedabad", "Inde"), "gandhinagar": ("Gandhinagar", "Inde"),
+    "makati": ("Manille", "Philippines"), "quezon": ("Manille", "Philippines"), "taguig": ("Manille", "Philippines"),
+    "pasig": ("Manille", "Philippines"), "cebu": ("Cebu", "Philippines"), "kwun tong": ("Hong Kong", "Hong Kong"),
+    "island east": ("Hong Kong", "Hong Kong"), "quarry bay": ("Hong Kong", "Hong Kong"), "kowloon": ("Hong Kong", "Hong Kong"),
+    "colombo": ("Colombo", "Sri Lanka"), "caba": ("Buenos Aires", "Argentine"), "hamilton": ("Hamilton", "Bermudes"),
+    "george town": ("George Town", "Îles Caïmans"), "montevideo": ("Montevideo", "Uruguay"), "san jose": ("San José", "Costa Rica"),
+    "guangzhou": ("Canton", "Chine"), "chengdu": ("Chengdu", "Chine"), "dalian": ("Dalian", "Chine"), "suzhou": ("Suzhou", "Chine"),
+    "brisbane": ("Brisbane", "Australie"), "perth": ("Perth", "Australie"), "toronto": ("Toronto", "Canada"),
+    "calgary": ("Calgary", "Canada"), "ottawa": ("Ottawa", "Canada"), "quebec": ("Québec", "Canada"), "levis": ("Lévis", "Canada"),
 }
 
 _US_STATES = re.compile(r",\s*(NY|CT|IL|CA|MA|FL|TX|NJ|NC|WA|GA|PA|CO|DC)\b")
@@ -236,8 +300,29 @@ def parse_location(raw: str, city_hint: str = "", country_hint: str = "") -> dic
             continue
         if ctry not in countries:
             countries.append(ctry)
-    if not countries and _US_STATES.search(raw or ""):
-        countries.append("États-Unis")
+    if not countries:
+        r = raw or ""
+        m = re.search(r"\b([A-Z]{3})-", r)  # « PHL-Taguig », « POL-Gdynia »
+        if m and m.group(1) in ISO3:
+            countries.append(ISO3[m.group(1)])
+        elif re.search(r",\s*IN,?\s*\d{6}\b", r):  # code postal indien à 6 chiffres
+            countries.append("Inde")
+        else:
+            codes = re.findall(r"(?:^|[,\s])([A-Z]{2})(?=\s*(?:,|$|\s*-|\s*\(?\d))", r)
+            us = [c for c in codes if c in US_STATES]
+            iso = [c for c in codes if c in ISO2 and c not in US_STATES]
+            if iso:
+                countries.append(ISO2[iso[-1]])
+            elif us or re.match(r"^\s*(%s)\s*-" % "|".join(US_STATES), r):
+                countries.append("États-Unis")
+            else:
+                low = re.search(r",\s*([a-z]{2})\s*$", r)  # « Courbevoie, fr »
+                if low and low.group(1).upper() in ISO2:
+                    countries.append(ISO2[low.group(1).upper()])
+        if countries and not city:
+            first = re.split(r"[,(]", re.sub(r"^[A-Z]{2,3}\s*-\s*", "", r))[0].strip(" -")
+            if first and not re.search(r"\d|locations?", first, re.I) and len(first) < 40 and not re.fullmatch(r"[A-Z]{2,3}", first):
+                city = first.title() if first.isupper() else first
     country = countries[0] if countries else ""
     return {
         "city": city,

@@ -169,12 +169,46 @@ def smartrecruiters(c):
             break
 
 
+# Cache des lieux détaillés Workday (« 3 Locations » → vraies villes), conservé d'un passage à l'autre
+import json as _json  # noqa: E402
+import threading as _threading  # noqa: E402
+from pathlib import Path as _Path  # noqa: E402
+
+WD_CACHE_FILE = _Path(__file__).resolve().parent.parent / "site" / "data" / "wd_locations.json"
+_wd_lock = _threading.Lock()
+try:
+    WD_CACHE = _json.loads(WD_CACHE_FILE.read_text())
+except (FileNotFoundError, ValueError):
+    WD_CACHE = {}
+
+
+def save_wd_cache():
+    with _wd_lock:
+        WD_CACHE_FILE.parent.mkdir(parents=True, exist_ok=True)
+        WD_CACHE_FILE.write_text(_json.dumps(WD_CACHE, ensure_ascii=False, separators=(",", ":")))
+
+
+def workday_detail(host, tenant, site, path):
+    """Lieux complets d'une offre Workday (une requête, mise en cache)."""
+    url = f"https://{host}/{site}{path}"
+    if url in WD_CACHE:
+        return WD_CACHE[url]
+    info = http.get(f"https://{host}/wday/cxs/{tenant}/{site}{path}").get("jobPostingInfo", {})
+    locs = [info.get("location", "")] + list(info.get("additionalLocations") or [])
+    country = (info.get("country") or {}).get("descriptor", "")
+    val = "; ".join(x for x in locs if x) + (f"; {country}" if country else "")
+    with _wd_lock:
+        WD_CACHE[url] = val
+    return val
+
+
 def workday(c):
     m = re.match(r"https://([^/]+)/(?:[a-z]{2}-[A-Z]{2}/)?([^/?#]+)", c["url"])
     host, site = m.group(1), m.group(2)
     tenant = host.split(".")[0]
     api = f"https://{host}/wday/cxs/{tenant}/{site}/jobs"
     seen = set()
+    details = 0
     for q in c.get("search", SEARCH_TERMS):
         offset = 0
         while offset < c.get("max_per_term", 200):
@@ -185,7 +219,15 @@ def workday(c):
                 if not path or path in seen:
                     continue
                 seen.add(path)
-                yield raw(c["name"], c["type"], j.get("title"), j.get("locationsText"), f"https://{host}/{site}{path}",
+                loc = j.get("locationsText") or ""
+                if (not loc or re.search(r"\d+\s+Locations?", loc)) and details < c.get("max_details", 200):
+                    try:
+                        before = len(WD_CACHE)
+                        loc = workday_detail(host, tenant, site, path) or loc
+                        details += len(WD_CACHE) - before
+                    except Exception:  # noqa: BLE001 — on garde « N Locations »
+                        pass
+                yield raw(c["name"], c["type"], j.get("title"), loc, f"https://{host}/{site}{path}",
                           ago_to_iso(j.get("postedOn")), "Workday")
             offset += 20
             if len(posts) < 20:
@@ -377,7 +419,7 @@ GENDER = re.compile(r"[-_ ](h-?f|f-?h|m-?f|f-?m|m-?w-?d|w-?m-?d|m-?f-?d|f-?h-?x|
 
 def fetch_bytes(url: str) -> bytes:
     http.check_robots(url)
-    r = http.s.get(url, timeout=60)
+    r = http.s.get(url, timeout=60, headers={"Accept": "application/xml, text/xml, application/gzip, */*"})
     r.raise_for_status()
     data = r.content
     return gzip.decompress(data) if data[:2] == b"\x1f\x8b" else data

@@ -33,7 +33,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from classify import (classify_contract, classify_specialisation, parse_location,  # noqa: E402
                       parse_start)
 from connectors import (CONNECTORS, SEARCH_TERMS, http, jobteaser, linkedin_alerts, norm_slug, raw,  # noqa: E402
-                        wttj)
+                        save_wd_cache, wttj)
 from discover import discover  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -377,6 +377,7 @@ def collect(check=False, only: set[str] | None = None):
     ok_n = sum(s["ok"] for s in status)
     log.info("\n%d/%d sources OK — %d offres finance", ok_n, len(status), len(rows))
     RESOLVED.write_text(json.dumps(resolved, ensure_ascii=False, indent=1, sort_keys=True))
+    save_wd_cache()
     if check:
         return
     uniq = {j["id"]: j for j in rows}
