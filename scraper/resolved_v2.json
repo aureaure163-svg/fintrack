@@ -3463,7 +3463,7 @@
   ]
  },
  "KKR": {
-  "at": "2026-11-12T22:59:47+00:00",
+  "at": "2026-11-13T01:27:23+00:00",
   "configs": [
    {
     "ats": "greenhouse",
@@ -3978,13 +3978,9 @@
   "configs": []
  },
  "MetLife Investment Management": {
-  "at": "2026-11-12T21:04:24+00:00",
-  "configs": [
-   {
-    "ats": "lever",
-    "token": "metlife"
-   }
-  ]
+  "at": "2026-11-13T01:27:23+00:00",
+  "configs": [],
+  "note": "aucune offre"
  },
  "Metabit Trading": {
   "at": "2026-11-12T18:26:17+00:00",
@@ -6152,6 +6148,14 @@
   "at": "2026-11-12T22:59:47+00:00",
   "configs": []
  },
+ "VF Corporation": {
+  "at": "2026-11-13T01:27:23+00:00",
+  "configs": []
+ },
+ "VGD": {
+  "at": "2026-11-13T01:27:23+00:00",
+  "configs": []
+ },
  "VINCI Concessions": {
   "at": "2026-11-12T18:54:00+00:00",
   "configs": [
@@ -6160,6 +6164,35 @@
     "token": "vinci"
    }
   ]
+ },
+ "VINCI Construction": {
+  "at": "2026-11-13T01:27:23+00:00",
+  "configs": [
+   {
+    "ats": "smartrecruiters",
+    "token": "vinciconstruction"
+   }
+  ]
+ },
+ "VISCHER": {
+  "at": "2026-11-13T01:27:23+00:00",
+  "configs": []
+ },
+ "VIVALTO PARTNERS SAS": {
+  "at": "2026-11-13T01:27:23+00:00",
+  "configs": []
+ },
+ "VSB énergies nouvelles": {
+  "at": "2026-11-13T01:27:23+00:00",
+  "configs": []
+ },
+ "VU Venture Partners": {
+  "at": "2026-11-13T01:27:23+00:00",
+  "configs": []
+ },
+ "VZ VermögensZentrum": {
+  "at": "2026-11-13T01:27:23+00:00",
+  "configs": []
  },
  "Valsoft Corporation": {
   "at": "2026-11-12T18:26:17+00:00",
@@ -6197,6 +6230,10 @@
   "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
+ "Verder Liquids": {
+  "at": "2026-11-13T01:27:23+00:00",
+  "configs": []
+ },
  "Verition": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
@@ -6217,6 +6254,10 @@
     "token": "vinci"
    }
   ]
+ },
+ "Viridium Gruppe": {
+  "at": "2026-11-13T01:27:23+00:00",
+  "configs": []
  },
  "Vista Equity Partners": {
   "at": "2026-11-12T21:04:24+00:00",
@@ -6265,8 +6306,20 @@
   "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
+ "Voltalia": {
+  "at": "2026-11-13T01:27:23+00:00",
+  "configs": []
+ },
+ "W1M Wealth & Investment Management": {
+  "at": "2026-11-13T01:27:23+00:00",
+  "configs": []
+ },
  "WAYES": {
   "at": "2026-11-12T18:54:00+00:00",
+  "configs": []
+ },
+ "WSP in the UK & Ireland": {
+  "at": "2026-11-13T01:27:23+00:00",
   "configs": []
  },
  "Warburg Invest": {
@@ -6275,6 +6328,10 @@
  },
  "Warburg Pincus": {
   "at": "2026-11-12T18:54:00+00:00",
+  "configs": []
+ },
+ "Warner Music Australia": {
+  "at": "2026-11-13T01:27:23+00:00",
   "configs": []
  },
  "Waterfall Asset Management": {
@@ -6294,6 +6351,26 @@
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
  },
+ "Wave Capital Manager Ltd": {
+  "at": "2026-11-13T01:27:23+00:00",
+  "configs": []
+ },
+ "Wavestone": {
+  "at": "2026-11-13T01:27:23+00:00",
+  "configs": []
+ },
+ "We fynd": {
+  "at": "2026-11-13T01:27:23+00:00",
+  "configs": []
+ },
+ "WeMa": {
+  "at": "2026-11-13T01:27:23+00:00",
+  "configs": []
+ },
+ "Wealthrone Capital": {
+  "at": "2026-11-13T01:27:23+00:00",
+  "configs": []
+ },
  "Weatherbys Private Bank": {
   "at": "2026-11-12T21:04:24+00:00",
   "configs": []
@@ -6302,12 +6379,24 @@
   "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
+ "Weinberg Capital Partners": {
+  "at": "2026-11-13T01:27:23+00:00",
+  "configs": []
+ },
  "Wells Fargo": {
   "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
  "Welltower": {
   "at": "2026-11-12T18:26:17+00:00",
+  "configs": []
+ },
+ "Werfen": {
+  "at": "2026-11-13T01:27:23+00:00",
+  "configs": []
+ },
+ "Westinghouse Electric Company": {
+  "at": "2026-11-13T01:27:23+00:00",
   "configs": []
  },
  "Westpac": {
@@ -6327,6 +6416,14 @@
   "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
+ "Wincasa": {
+  "at": "2026-11-13T01:27:23+00:00",
+  "configs": []
+ },
+ "Wineus AG": {
+  "at": "2026-11-13T01:27:23+00:00",
+  "configs": []
+ },
  "Wintergerst": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
@@ -6335,8 +6432,21 @@
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "Wizard-Tech": {
+  "at": "2026-11-13T01:27:23+00:00",
+  "configs": [
+   {
+    "ats": "ashby",
+    "token": "wizard"
+   }
+  ]
+ },
  "Wolverine Trading": {
   "at": "2026-11-12T21:04:24+00:00",
+  "configs": []
+ },
+ "Women & Business Magazine": {
+  "at": "2026-11-13T01:27:23+00:00",
   "configs": []
  },
  "Woozle Research": {
@@ -6359,8 +6469,36 @@
   "at": "2026-11-12T21:04:24+00:00",
   "configs": []
  },
+ "YO IT Consulting": {
+  "at": "2026-11-13T01:27:23+00:00",
+  "configs": []
+ },
+ "YUAN High-Tech": {
+  "at": "2026-11-13T01:27:23+00:00",
+  "configs": []
+ },
+ "Yellow Tree Group": {
+  "at": "2026-11-13T01:27:23+00:00",
+  "configs": []
+ },
+ "You Look Fabulous": {
+  "at": "2026-11-13T01:27:23+00:00",
+  "configs": []
+ },
+ "YouLend": {
+  "at": "2026-11-13T01:27:23+00:00",
+  "configs": []
+ },
+ "Zaoui & Co.": {
+  "at": "2026-11-13T01:27:23+00:00",
+  "configs": []
+ },
  "Zelestra": {
   "at": "2026-11-12T18:54:00+00:00",
+  "configs": []
+ },
+ "Zenova": {
+  "at": "2026-11-13T01:27:23+00:00",
   "configs": []
  },
  "Ziegler": {
