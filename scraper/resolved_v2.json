@@ -1040,7 +1040,7 @@
   "configs": []
  },
  "Blackstone": {
-  "at": "2026-11-14T05:08:15+00:00",
+  "at": "2026-11-14T07:23:57+00:00",
   "configs": [
    {
     "ats": "workable",
@@ -1325,13 +1325,9 @@
   "configs": []
  },
  "CITIC CLSA": {
-  "at": "2026-11-12T18:26:17+00:00",
-  "configs": [
-   {
-    "ats": "workday",
-    "url": "https://citicclsa.wd3.myworkdayjobs.com/External"
-   }
-  ]
+  "at": "2026-11-14T07:23:57+00:00",
+  "configs": [],
+  "note": "aucune offre"
  },
  "CJH Family Office": {
   "at": "2026-11-12T18:26:17+00:00",
@@ -3473,7 +3469,7 @@
   ]
  },
  "KKR": {
-  "at": "2026-11-14T05:08:15+00:00",
+  "at": "2026-11-14T07:23:57+00:00",
   "configs": [
    {
     "ats": "greenhouse",
