@@ -1039,6 +1039,16 @@
   "at": "2026-11-12T18:54:00+00:00",
   "configs": []
  },
+ "Blackstone": {
+  "at": "2026-11-14T03:03:57+00:00",
+  "configs": [
+   {
+    "ats": "workable",
+    "token": "blackstone"
+   }
+  ],
+  "note": "remplace le connecteur de sources.yaml"
+ },
  "Blanche Capital": {
   "at": "2026-11-12T18:26:17+00:00",
   "configs": []
@@ -3463,7 +3473,7 @@
   ]
  },
  "KKR": {
-  "at": "2026-11-14T01:23:36+00:00",
+  "at": "2026-11-14T03:03:57+00:00",
   "configs": [
    {
     "ats": "greenhouse",
