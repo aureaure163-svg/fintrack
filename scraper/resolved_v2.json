@@ -1040,7 +1040,7 @@
   "configs": []
  },
  "Blackstone": {
-  "at": "2026-11-21T15:03:32+00:00",
+  "at": "2026-11-21T17:00:39+00:00",
   "configs": [
    {
     "ats": "workable",
@@ -3448,7 +3448,7 @@
   ]
  },
  "KKR": {
-  "at": "2026-11-21T15:03:32+00:00",
+  "at": "2026-11-21T17:00:39+00:00",
   "configs": [
    {
     "ats": "greenhouse",
@@ -6054,13 +6054,9 @@
   "configs": []
  },
  "UniCredit": {
-  "at": "2026-11-12T18:26:17+00:00",
-  "configs": [
-   {
-    "ats": "avature",
-    "url": "https://careers.unicredit.eu/en_GB/jobsuche/SearchJobs"
-   }
-  ]
+  "at": "2026-11-21T17:00:39+00:00",
+  "configs": [],
+  "note": "aucune offre"
  },
  "Unibail-Rodamco-Westfield": {
   "at": "2026-11-20T01:27:47+00:00",
