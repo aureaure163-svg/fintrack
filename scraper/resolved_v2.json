@@ -1040,7 +1040,7 @@
   "configs": []
  },
  "Blackstone": {
-  "at": "2026-11-21T03:02:12+00:00",
+  "at": "2026-11-21T05:12:17+00:00",
   "configs": [
    {
     "ats": "workable",
@@ -3448,7 +3448,7 @@
   ]
  },
  "KKR": {
-  "at": "2026-11-21T03:02:12+00:00",
+  "at": "2026-11-21T05:12:17+00:00",
   "configs": [
    {
     "ats": "greenhouse",
@@ -5426,9 +5426,13 @@
   "configs": []
  },
  "Scotiabank": {
-  "at": "2026-11-14T05:08:15+00:00",
-  "configs": [],
-  "note": "aucune offre"
+  "at": "2026-11-21T05:12:17+00:00",
+  "configs": [
+   {
+    "ats": "successfactors",
+    "url": "https://jobs.scotiabank.com"
+   }
+  ]
  },
  "Sdeira Group": {
   "at": "2026-11-20T01:27:47+00:00",
