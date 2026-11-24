@@ -1040,7 +1040,7 @@
   "configs": []
  },
  "Blackstone": {
-  "at": "2026-11-24T11:10:24+00:00",
+  "at": "2026-11-24T13:35:22+00:00",
   "configs": [
    {
     "ats": "workable",
@@ -1308,9 +1308,13 @@
   "configs": []
  },
  "CIC": {
-  "at": "2026-11-17T11:15:21+00:00",
-  "configs": [],
-  "note": "aucune offre"
+  "at": "2026-11-24T13:35:22+00:00",
+  "configs": [
+   {
+    "ats": "lever",
+    "token": "cic"
+   }
+  ]
  },
  "CIMB": {
   "at": "2026-11-19T19:18:14+00:00",
@@ -1464,9 +1468,13 @@
   "configs": []
  },
  "Capital Group": {
-  "at": "2026-11-17T11:15:21+00:00",
-  "configs": [],
-  "note": "aucune offre"
+  "at": "2026-11-24T13:35:22+00:00",
+  "configs": [
+   {
+    "ats": "lever",
+    "token": "capital"
+   }
+  ]
  },
  "CapitexAI": {
   "at": "2026-11-19T23:02:29+00:00",
@@ -1881,9 +1889,13 @@
   "configs": []
  },
  "DNB": {
-  "at": "2026-11-17T11:15:21+00:00",
-  "configs": [],
-  "note": "aucune offre"
+  "at": "2026-11-24T13:35:22+00:00",
+  "configs": [
+   {
+    "ats": "lever",
+    "token": "dnb"
+   }
+  ]
  },
  "DOLY GESTION": {
   "at": "2026-11-19T23:02:29+00:00",
@@ -2039,9 +2051,13 @@
   "configs": []
  },
  "Dng": {
-  "at": "2026-11-17T11:15:21+00:00",
-  "configs": [],
-  "note": "aucune offre"
+  "at": "2026-11-24T13:35:22+00:00",
+  "configs": [
+   {
+    "ats": "lever",
+    "token": "dng"
+   }
+  ]
  },
  "Donner & Reuschel": {
   "at": "2026-11-19T19:18:14+00:00",
@@ -3226,9 +3242,13 @@
   "configs": []
  },
  "ION": {
-  "at": "2026-11-17T11:15:21+00:00",
-  "configs": [],
-  "note": "aucune offre"
+  "at": "2026-11-24T13:35:22+00:00",
+  "configs": [
+   {
+    "ats": "lever",
+    "token": "ion"
+   }
+  ]
  },
  "IRBIS": {
   "at": "2026-11-19T19:18:14+00:00",
@@ -3384,9 +3404,13 @@
   "configs": []
  },
  "JMI Equity": {
-  "at": "2026-11-17T11:15:21+00:00",
-  "configs": [],
-  "note": "aucune offre"
+  "at": "2026-11-24T13:35:22+00:00",
+  "configs": [
+   {
+    "ats": "lever",
+    "token": "jmi"
+   }
+  ]
  },
  "JPC Advisors": {
   "at": "2026-11-19T23:02:29+00:00",
@@ -3448,7 +3472,7 @@
   ]
  },
  "KKR": {
-  "at": "2026-11-24T11:10:24+00:00",
+  "at": "2026-11-24T13:35:22+00:00",
   "configs": [
    {
     "ats": "greenhouse",
@@ -3478,9 +3502,13 @@
   "configs": []
  },
  "Kepler Cheuvreux": {
-  "at": "2026-11-17T11:15:21+00:00",
-  "configs": [],
-  "note": "aucune offre"
+  "at": "2026-11-24T13:35:22+00:00",
+  "configs": [
+   {
+    "ats": "lever",
+    "token": "kepler"
+   }
+  ]
  },
  "Kering": {
   "at": "2026-11-19T23:02:29+00:00",
@@ -3648,9 +3676,13 @@
   "configs": []
  },
  "LightEdge Asset Management": {
-  "at": "2026-11-17T11:15:21+00:00",
-  "configs": [],
-  "note": "aucune offre"
+  "at": "2026-11-24T13:35:22+00:00",
+  "configs": [
+   {
+    "ats": "lever",
+    "token": "lightedge"
+   }
+  ]
  },
  "Lilja & Co.": {
   "at": "2026-11-19T23:02:29+00:00",
@@ -4069,9 +4101,13 @@
   "configs": []
  },
  "Mutares": {
-  "at": "2026-11-17T11:15:21+00:00",
-  "configs": [],
-  "note": "aucune offre"
+  "at": "2026-11-24T13:35:22+00:00",
+  "configs": [
+   {
+    "ats": "lever",
+    "token": "mutares"
+   }
+  ]
  },
  "NDA": {
   "at": "2026-11-20T01:27:47+00:00",
@@ -4561,9 +4597,13 @@
   "configs": []
  },
  "PICUS Capital": {
-  "at": "2026-11-17T11:15:21+00:00",
-  "configs": [],
-  "note": "aucune offre"
+  "at": "2026-11-24T13:35:22+00:00",
+  "configs": [
+   {
+    "ats": "lever",
+    "token": "picus"
+   }
+  ]
  },
  "PITHOS": {
   "at": "2026-11-20T01:27:47+00:00",
@@ -5028,9 +5068,13 @@
   "configs": []
  },
  "Raine Group": {
-  "at": "2026-11-17T11:15:21+00:00",
-  "configs": [],
-  "note": "aucune offre"
+  "at": "2026-11-24T13:35:22+00:00",
+  "configs": [
+   {
+    "ats": "lever",
+    "token": "raine"
+   }
+  ]
  },
  "Raise": {
   "at": "2026-11-19T19:18:14+00:00",
@@ -5075,9 +5119,8 @@
   "configs": []
  },
  "Readystate": {
-  "at": "2026-11-17T13:29:50+00:00",
-  "configs": [],
-  "note": "aucune offre"
+  "at": "2026-11-24T13:35:22+00:00",
+  "configs": []
  },
  "Realty Income Corporation": {
   "at": "2026-11-20T01:27:47+00:00",
@@ -5120,9 +5163,13 @@
   "configs": []
  },
  "Reply": {
-  "at": "2026-11-17T11:15:21+00:00",
-  "configs": [],
-  "note": "aucune offre"
+  "at": "2026-11-24T13:35:22+00:00",
+  "configs": [
+   {
+    "ats": "lever",
+    "token": "reply"
+   }
+  ]
  },
  "Retail Insights": {
   "at": "2026-11-12T22:59:47+00:00",
@@ -5743,9 +5790,13 @@
   "configs": []
  },
  "TAG Partners": {
-  "at": "2026-11-17T11:15:21+00:00",
-  "configs": [],
-  "note": "aucune offre"
+  "at": "2026-11-24T13:35:22+00:00",
+  "configs": [
+   {
+    "ats": "lever",
+    "token": "tag"
+   }
+  ]
  },
  "TAP Advisors": {
   "at": "2026-11-20T01:27:47+00:00",
@@ -6281,9 +6332,8 @@
   "configs": []
  },
  "Waterfall Asset Management": {
-  "at": "2026-11-17T11:15:21+00:00",
-  "configs": [],
-  "note": "aucune offre"
+  "at": "2026-11-24T13:35:22+00:00",
+  "configs": []
  },
  "Waterfront International": {
   "at": "2026-11-19T21:06:37+00:00",
